@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/*COLOR*/
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --brack: #000;
+    ---navy: #04314b;
+}
+
+/*COMMON*/
+body{
+    line-height: 1.7;
+    color: var(--brack);
+}
+a {
+    text-decoration: none; 
+}
+p {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 550;
+}
+img{
+    max-width: 100%;
+}
+.fadein{
+    opacity: 0;
+}
+.container{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+/*LOADING*/
+#loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-grey);
+    position: fixed;
+    z-index: 9999;
+    display: grid;
+    place-items: center; 
+}
+#loading-screen{
+    background-color: var(---navy);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    translate: 0 100vh; 
+}
+#loading img{
+    align-items: flex-start;
+}
+
+/*SLIDE MENU*/
+.btn-menu{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+    padding: .5rem 1rem;
+    border: 1px solid var(---navy);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+.btn-menu svg{
+    fill: var(---navy);
+    margin-top: .25rem;
+    height: 2rem;
+    width: 2rem;
+}
+/*閉じるボタン*/
+#menu-close{
+    border: 1px solid var(--white);
+}
+#menu-close svg{
+    fill: var(--white);
+}
+/*スライドメニューパネル*/
+#menu-panel{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 8rem 2rem 2rem;
+    /*width: 300px;*/
+    width: 300px;
+    height: 100vh;
+    background-color: var(---navy);
+    box-shadow: 0 0 2rem var(--white);
+        font-family: "M PLUS 1p", sans-serif;
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li{
+    padding-left: 40px;
+    margin: 1.5rem 0;
+    opacity: 0;
+}
+.menu-list a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/*HOME*/
+.start {
+    scroll-snap-align: start;
+    height: 100vh;
+    position: relative; 
+    z-index: 0; 
+    overflow: hidden;
+}
+/*背景画像*/
+#bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/1.jpeg);
+    background-size: cover;
+    background-position: center;
+    animation: change-image 15s infinite;
+    filter: blur(10px);
+    z-index: -1;
+}
+@keyframes change-image {
+    0%, 100% { background-image: url(../images/1.jpeg); }
+    25% { background-image: url(../images/2.jpeg); }
+    50% { background-image: url(../images/3.jpeg); }
+    75% { background-image: url(../images/4.jpeg); }
+}
+/*タイトル*/
+#page-title {
+    position: sticky;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.title-inner {
+    text-align: center;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    color: var(--white);
+    font-size: max(12rem, 3rem);
+    padding-bottom: 10px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*PROFILE*/
+.profile{
+    background-color: var(--light-grey);
+    text-align: center;
+    height: 100vh;
+}
+.profile-header{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 100px;
+    margin: 50px;
+    padding-top: 45px;
+}
+.profile p {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+/*ACTIVITY*/
+.activity{
+    height: 150vh;
+    display: block;
+}
+.header-box{
+    position: fixed;
+    height: 30vh;
+}
+/*タイトル*/
+.activity-header {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 150px; 
+}
+/*メイン１*/
+.activity-main1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    margin-bottom: 200px ;
+}
+.activity-img1 {
+    flex: 1 1 45%;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.activity-main1 > div {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.activity-name1 {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.activity-article1 {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    line-height: 1.7;
+}
+.activity-article1 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(---navy);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+/*メイン２*/
+.activity-main2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    margin-bottom: 200px ;
+}
+.activity-img2 {
+    flex: 1 1 45%;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.activity-name2 > div {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.activity-name2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.activity-article2 {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    line-height: 1.7;
+}
+.activity-article2 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(---navy);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/*FOOTER*/
+.end{
+    scroll-snap-align: end;
+}
+footer{
+    background: var(---navy);
+    text-align: center;
+    height: 30vh;
+    padding: 26px 0;
+}
+footer p{
+    color: #fff;
+    font-size: 1rem;
+}

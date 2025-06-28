@@ -93,7 +93,7 @@ img{
     height: 100vh;
     background-color: var(---navy);
     box-shadow: 0 0 2rem var(--white);
-        font-family: "M PLUS 1p", sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
     translate: 100vw;
 }
 .menu-list {

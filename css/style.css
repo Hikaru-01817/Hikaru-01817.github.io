@@ -321,11 +321,11 @@ footer p{
     max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
-  background: #ffffffee; /* 半透明白背景 */
+    background: #ffffffee; /*半透明白背景 */
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
-  backdrop-filter: blur(4px); /* ぼかし効果（背景が透けてるときに映える） */
+    backdrop-filter: blur(4px); /*背景が透けてるときに映える*/
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .blog:hover {

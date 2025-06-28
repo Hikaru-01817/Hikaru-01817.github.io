@@ -303,6 +303,7 @@ footer p{
 }
 
 /*activity.html*/
+/*Blog CONTENTS*/
 .container2{
     height: auto;
 }
@@ -348,14 +349,14 @@ footer p{
     padding: 10px;
 }
 .blog-contents h2 {
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
     color: #333;
 }
 .blog-contents p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 1.2rem;
     line-height: 1.7;
-    color: #555;
+    color: var(--brack);
 }
 

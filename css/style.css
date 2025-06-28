@@ -303,3 +303,59 @@ footer p{
 }
 
 /*activity.html*/
+.container2{
+    height: auto;
+}
+#blog-title{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 150px; 
+}
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+  background: #ffffffee; /* 半透明白背景 */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  backdrop-filter: blur(4px); /* ぼかし効果（背景が透けてるときに映える） */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+.blog iframe {
+    flex: 1 1 40%;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.blog-contents {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.blog-contents h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+.blog-contents p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.7;
+    color: #555;
+}
+

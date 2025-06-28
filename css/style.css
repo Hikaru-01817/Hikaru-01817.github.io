@@ -156,18 +156,23 @@ img{
 
 /*PROFILE*/
 .profile{
-    background-color: var(--light-grey);
+    background-image: url(../images/IMG_0330.jpg);
+    filter: grayscale(100%);
+    background-size: cover;
     text-align: center;
     height: 100vh;
 }
 .profile-header{
+    color: var(--white);
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 100px;
     margin: 50px;
-    padding-top: 45px;
+    padding-top: 40px;
 }
 .profile p {
+    color: var(--white);
     font-size: 50px;
+    font-weight: bold;
     padding-bottom: 30px;
 }
 

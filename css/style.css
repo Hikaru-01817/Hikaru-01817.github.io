@@ -352,7 +352,7 @@ footer p{
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--brack);
 }
 .blog-contents p {
     font-size: 1.2rem;

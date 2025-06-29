@@ -194,19 +194,29 @@ img{
     margin-top: 20px;
     margin-bottom: 150px; 
 }
-/*メイン１*/
-.activity-main1 {
+/*メイン*/
+.activity-main {
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 30px;
     flex-wrap: wrap;
-    margin-bottom: 200px ;
+    margin-bottom: 180px ;
+    background: #ffffffee; /*半透明白背景 */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.activity-img1 {
+.activity-main:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+.activity-img {
     flex: 1 1 45%;
     max-width: 500px;
     width: 100%;
@@ -215,69 +225,23 @@ img{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
-.activity-main1 > div {
+.activity-main > div {
     flex: 1 1 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.activity-name1 {
+.activity-name {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: bold;
     margin-bottom: 12px;
 }
-.activity-article1 {
+.activity-article {
     font-size: clamp(1.1rem, 2vw, 1.6rem);
     line-height: 1.7;
 }
-.activity-article1 a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(---navy);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-/*メイン２*/
-.activity-main2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; 
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    flex-wrap: wrap;
-    margin-bottom: 300px ;
-}
-.activity-img2 {
-    flex: 1 1 45%;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
-}
-.activity-name2 > div {
-    flex: 1 1 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.activity-name2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-.activity-article2 {
-    font-size: clamp(1.1rem, 2vw, 1.6rem);
-    line-height: 1.7;
-}
-.activity-article2 a {
+.activity-article a {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;

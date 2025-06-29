@@ -304,6 +304,9 @@ footer p{
 
 /*activity.html*/
 /*Blog CONTENTS*/
+#activity-page{
+    background-color: var(--light-grey);
+}
 .container2{
     height: auto;
 }

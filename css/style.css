@@ -359,4 +359,12 @@ footer p{
     line-height: 1.7;
     color: var(--brack);
 }
-
+.blog-img {
+    flex: 1 1 45%;
+    max-width: 470px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

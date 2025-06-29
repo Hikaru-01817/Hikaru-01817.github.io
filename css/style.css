@@ -179,7 +179,7 @@ img{
 
 /*ACTIVITY*/
 .activity{
-    height: 150vh;
+    height: auto;
     display: block;
 }
 .header-box{
@@ -204,7 +204,7 @@ img{
     margin: 0 auto;
     padding: 30px;
     flex-wrap: wrap;
-    margin-bottom: 180px ;
+    margin-bottom: 170px;
     background: #ffffffee; /*半透明白背景 */
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

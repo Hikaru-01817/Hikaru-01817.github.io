@@ -191,8 +191,7 @@ img{
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 100px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 150px; 
+    margin: 20px auto 150px auto;
 }
 /*メイン*/
 .activity-main {
@@ -278,8 +277,13 @@ footer p{
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 100px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 150px; 
+    max-width: 1000px;
+    margin: 20px auto 150px auto; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: #ffffffee; 
+    border-radius: 16px
 }
 .blog {
     display: flex;

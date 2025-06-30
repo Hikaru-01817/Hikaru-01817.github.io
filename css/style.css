@@ -251,12 +251,37 @@ img{
 footer{
     background: var(---navy);
     text-align: center;
-    height: 30vh;
+    height: auto;
     padding: 26px 0;
 }
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+footer li {
+    text-decoration: none;
+    margin: 0 20px;
+}
+footer a {
+    color: var(--white);
+}
+footer a:hover {
+    color: var(--light-grey);
+}
 footer p{
-    color: #fff;
+    color: var(--white);
     font-size: 1rem;
+}
+footer li::before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 16px;
+    margin: 0 10px 3px 0;
 }
 
 /*activity.html*/

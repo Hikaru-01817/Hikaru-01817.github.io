@@ -267,9 +267,6 @@ footer p{
 
 /*activity.html*/
 /*Blog CONTENTS*/
-#activity-page{
-    background-color: var(--light-grey);
-}
 .container2{
     height: auto;
 }
@@ -279,11 +276,6 @@ footer p{
     text-align: center;
     max-width: 1000px;
     margin: 20px auto 150px auto; 
-    padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background: #ffffffee; 
-    border-radius: 16px
 }
 .blog {
     display: flex;

@@ -264,6 +264,15 @@ footer li {
     text-decoration: none;
     margin: 0 20px;
 }
+footer li::before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 16px;
+    margin: 0 10px 3px 0;
+}
 footer a {
     color: var(--white);
 }
@@ -273,15 +282,6 @@ footer a:hover {
 footer p{
     color: var(--white);
     font-size: 1rem;
-}
-footer li::before {
-    display: inline-block;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: var(--white);
-    border-radius: 16px;
-    margin: 0 10px 3px 0;
 }
 
 /*activity.html*/

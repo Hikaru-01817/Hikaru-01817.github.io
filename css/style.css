@@ -176,6 +176,10 @@ img{
     height: auto;
     display: block;
 }
+.activity-head {
+    background-color: var(---navy);
+    height: 13px;
+}
 .header-box{
     position: fixed;
     height: 30vh;
@@ -288,6 +292,10 @@ footer p{
 /*Blog CONTENTS*/
 .container2{
     height: auto;
+}
+.blog-head{
+    background-color: var(---navy);
+    height: 13px;
 }
 #blog-title{
     font-family: "WDXL Lubrifont JP N", sans-serif;

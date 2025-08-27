@@ -178,7 +178,7 @@ img{
 }
 .activity-head {
     background-color: var(---navy);
-    height: 13px;
+    height: 15px;
 }
 .header-box{
     position: fixed;
@@ -187,22 +187,22 @@ img{
 /*タイトル*/
 .activity-header {
     font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: 100px;
+    font-size: 70px;
     text-align: center;
-    margin: 30px auto 150px auto;
+    margin: 30px auto 50px;
 }
 /*メイン*/
 .activity-main {
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
-    gap: 50px;
+    gap: 10px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 120px;
     padding: 30px;
     flex-wrap: wrap;
-    margin-bottom: 170px;
     background: #ffffffee; /*半透明白背景 */
+    color: var(--brack);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -215,14 +215,12 @@ img{
 }
 .activity-img {
     flex: 1 1 45%;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
+    max-width: 400px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
-.activity-main > div {
+.activity-main > a {
     flex: 1 1 50%;
     display: flex;
     flex-direction: column;
@@ -230,22 +228,13 @@ img{
 }
 .activity-name {
     font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 12px;
 }
 .activity-article {
-    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-size: 1.6rem;
     line-height: 1.7;
-}
-.activity-article a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(---navy);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
 }
 
 /*FOOTER*/
@@ -302,7 +291,7 @@ footer p{
     font-size: 100px;
     text-align: center;
     max-width: 1000px;
-    margin: 20px auto 150px auto; 
+    margin: 20px auto 100px; 
 }
 .blog {
     display: flex;

@@ -23,9 +23,6 @@ p {
     font-family: "M PLUS 1p", sans-serif;
     font-weight: 550;
 }
-img{
-    max-width: 100%;
-}
 .fadein{
     opacity: 0;
 }
@@ -156,19 +153,9 @@ img{
 }
 
 /*PROFILE*/
-.profile{
-    text-align: center;
-    height: 100vh;
-}
-.profile-header{
-    font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: 70px;
-    margin: 0 auto 50px;
-    padding-top: 40px;
-}
-.profile p {
-    font-size: 40px;
-    padding-bottom: 30px;
+.profile-background {
+    background-color: var(---navy);
+    height: 15px;
 }
 
 /*ACTIVITY*/
@@ -176,18 +163,11 @@ img{
     height: auto;
     display: block;
 }
-.profile-background{
-    background-color: var(---navy);
-    height: 15px;
-}
 .activity-head {
     background-color: var(---navy);
     height: 15px;
 }
-.header-box{
-    position: fixed;
-    height: 30vh;
-}
+
 /*タイトル*/
 .activity-header {
     font-family: "WDXL Lubrifont JP N", sans-serif;

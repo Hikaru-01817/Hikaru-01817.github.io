@@ -411,6 +411,7 @@ footer p{
 
     .activity-img {
         max-width: 100%;           /* 画像の幅をコンテナに合わせる */
+        object-fit: cover;
         margin-bottom: 20px;
     }
     

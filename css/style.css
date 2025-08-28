@@ -410,7 +410,8 @@ footer p{
     }
 
     .activity-img {
-        max-width: 100%;           /* 画像の幅をコンテナに合わせる */
+        max-width: 300px;           
+        max-height: 200px;
         margin:10px auto 20px;
         object-fit: cover;
     }

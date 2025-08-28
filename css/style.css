@@ -348,3 +348,87 @@ footer p{
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+/*スマートフォン用のスタイル (768px以下)*/
+@media screen and (max-width: 768px) {
+    /*ローディング*/
+    #loading img {
+        width: 100%;
+    }
+
+    /* メインタイトル */
+    .title-inner {
+        font-size: max(6.5rem, 3rem); /* スマートフォン向けにタイトルサイズを調整 */
+        line-height: 1.3;
+    }
+
+    /* プロフィールセクション */
+    #profile {
+        flex-direction: column;   /* 画像とテキストを縦並びに変更 */
+        align-items: center;      /* 中央揃えに */
+        margin: 80px auto;        /* 上下の余白を調整 */
+        padding: 0 20px;          /* 左右に余白を追加 */
+    }
+
+    .profile-img,
+    .profile-article {
+        width: 100%;              /* 横幅を画面いっぱいに */
+        text-align: center;       /* テキストを中央揃えに */
+    }
+    
+    .profile-img img {
+        width: 80%;               /* 画像が大きくなりすぎないように調整 */
+        height: auto;
+    }
+
+    .profile-article h2 {
+        font-size: 2.5rem;        /* 見出しのサイズを調整 */
+        margin-top: 20px;
+    }
+
+    .profile-article p {
+        font-size: 1.4rem;        /* 文章のサイズを調整 */
+        text-align: left;         /* 箇条書き部分は読みやすいように左揃えに */
+        margin: 50px 0 0 100px; 
+
+    }
+
+    /* 活動紹介セクション */
+    .activity-header {
+        font-size: 2.8rem;         /* 見出しのサイズを調整 */
+        margin: 40px auto;
+    }
+
+    .activity-main {
+        flex-direction: column;    /* コンテンツを縦並びに変更 */
+        margin: 0 20px 50px;     /* 余白を調整 */
+        padding: 20px;
+    }
+    
+    /* 2つ目の活動紹介(テキストが先に来る方)のレイアウトを調整 */
+    .activity-main:has(div + img) {
+        flex-direction: column-reverse; /* 画像が上に表示されるように順序を反転 */
+    }
+
+    .activity-img {
+        max-width: 100%;           /* 画像の幅をコンテナに合わせる */
+        margin-bottom: 20px;
+    }
+    
+    .activity-name {
+        font-size: 1.8rem;
+    }
+
+    .activity-article {
+        font-size: 1.1rem;
+    }
+
+    /* フッター */
+    footer ul {
+        margin-bottom: 1.5rem;
+    }
+
+    footer li {
+        margin: 0 15px;
+    }
+}

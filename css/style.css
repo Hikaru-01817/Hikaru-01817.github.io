@@ -410,11 +410,11 @@ footer p{
     }
 
     .activity-img {
-        max-width: 100%;           /* 画像の幅をコンテナに合わせる */
+        max-width: 300px;           /* 画像の幅をコンテナに合わせる */
+        margin:10px auto 20px;
         object-fit: cover;
-        margin-bottom: 20px;
     }
-    
+
     .activity-name {
         font-size: 1.8rem;
     }

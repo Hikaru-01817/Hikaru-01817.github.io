@@ -366,7 +366,7 @@ footer p{
     #profile {
         flex-direction: column;   /* 画像とテキストを縦並びに変更 */
         align-items: center;      /* 中央揃えに */
-        margin: 120px auto;        /* 上下の余白を調整 */
+        margin: 100px auto;        /* 上下の余白を調整 */
         padding: 0 20px;          /* 左右に余白を追加 */
     }
 

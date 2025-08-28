@@ -157,6 +157,29 @@ p {
     background-color: var(---navy);
     height: 15px;
 }
+#profile {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 250px auto;
+}
+.profile-img {
+    width: 50%;
+}
+.profile-img img {
+    max-width: 650px;
+    object-fit: cover;
+}
+.profile-article {
+    width: 42%;
+}
+.profile-article h2 {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 55px;
+}
+.profile-article p {
+    font-size: 30px;
+}
 
 /*ACTIVITY*/
 .activity{
@@ -185,7 +208,8 @@ p {
     margin: 0 auto 100px;
     padding: 30px;
     flex-wrap: wrap;
-    color: var(--brack);
+    border: 1px solid var(---navy);
+    border-radius: 17px;
 }
 
 .activity-img {

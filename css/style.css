@@ -146,7 +146,7 @@ p {
     text-align: center;
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
-    font-size: max(12rem, 3rem);
+    font-size: max(10rem, 3rem);
     padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -212,12 +212,16 @@ p {
     border-radius: 17px;
 }
 
+/* 修正点: 高さを300pxに固定して、テキストが減っても画像を維持 */
 .activity-img {
     flex: 1 1 45%;
     max-width: 450px;
+    height: 300px; /* ここを追加 */
+    width: 100%;   /* ここを追加 */
     object-fit: cover;
     border-radius: 8px;
 }
+
 .activity-main > div {
     flex: 1 1 50%;
     display: flex;
@@ -231,14 +235,30 @@ p {
     margin-bottom: 12px;
 }
 .activity-article {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.7;
 }
+
+/* Learn moreボタンのスタイル */
 .activity-article a {
-    font-size: 1.8rem;
+    display: inline-block;        /* ボタンのようなブロック要素にする */
+    margin-top: 15px;             /* 上に余白 */
+    padding: 10px 30px;           /* ボタンの内側の余白 */
+    font-size: 1.4rem;            /* 文字サイズ */
+    color: var(---navy);          /* 文字色 */
+    border: 1px solid var(---navy); /* 枠線 */
+    border-radius: 50px;          /* 丸い角 */
+    transition: all 0.3s ease;    /* アニメーション設定 */
+    background-color: transparent;/* 背景透明 */
 }
+
+/* ホバー時のスタイル */
 .activity-article a:hover {
-    color: var(--green);
+    color: var(--white);          /* 文字色を白に */
+    background-color: var(---navy); /* 背景色をネイビーに */
+    transform: translateY(-3px);  /* 少し上に浮き上がる */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 影をつける */
+    text-decoration: none;        /* 下線なし */
 }
 
 /*FOOTER*/
@@ -411,7 +431,7 @@ footer p{
 
     .activity-img {
         max-width: 300px;           
-        max-height: 200px;
+        max-height: 200px; /* スマホでは高さ制限を小さく */
         margin:10px auto 20px;
         object-fit: cover;
     }

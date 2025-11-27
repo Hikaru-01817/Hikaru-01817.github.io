@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* =========================================
+   Profile Page Specific Styles
+   ========================================= */
+
+/* プロフィールカードのコンテナ
+   activity.htmlの.blogクラスのデザインテイストを継承しつつ、
+   プロフィール用に調整しています */
+.profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* 垂直方向中央揃え */
+    justify-content: center;
+    gap: 40px; /* 要素間の余白 */
+    max-width: 1300px; /* 1000pxから1300pxに変更して横幅を拡大 */
+    margin: 10px auto 100px; /* タイトルとの距離を調整 */
+    padding: 50px 40px 70px; /* カード内の余白 (上 左右 下) */
+    background: rgba(255, 255, 255, 0.9); /* 半透明白背景 */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); /* 少し影を濃くして浮き出し感を強調 */
+    border: 1px solid #ddd;
+    backdrop-filter: blur(4px);
+}
+
+/* ページタイトル (カードの外へ移動) */
+#profile-title {
+    width: 100%;
+    text-align: center;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 5rem; /* 大きさは維持 */
+    color: var(---navy);
+    margin: 50px auto 30px; /* 上下の余白 */
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    letter-spacing: 0.05em;
+}
+
+/* 1. 写真エリア */
+.profile-photo-area {
+    flex: 1 1 300px; /* 基本幅300px、伸縮あり */
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo-area img {
+    width: 320px; /* 少し大きめに */
+    height: 320px;
+    object-fit: cover; /* 正方形にトリミング */
+    border-radius: 50%; /* 円形にする */
+    border: 6px solid var(--white); /* 白い縁取り */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo-area img:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+/* 2. 情報エリア */
+.profile-info-area {
+    flex: 1 1 450px; /* 基本幅を少し広げる */
+}
+
+/* 名前 */
+.profile-info-area h2 {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-size: 4rem;
+    color: var(---navy); /* style.cssの変数を使用 */
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--green); /* アクセントライン */
+    display: inline-block;
+    padding-right: 30px;
+}
+
+/* 3. 詳細リスト (定義リスト dl/dt/dd) */
+.profile-details {
+    font-family: "M PLUS 1p", sans-serif;
+}
+
+.detail-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1.4rem; /* 行間を少し広げる */
+    border-bottom: 1px dashed #ccc; /* 項目ごとの区切り線 */
+    padding-bottom: 0.8rem;
+}
+
+.detail-item dt {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(---navy);
+    width: 35%; /* ラベルの幅 */
+    min-width: 140px;
+}
+
+.detail-item dd {
+    font-size: 1.25rem; /* フォントサイズを少し大きく */
+    color: var(--brack); /* style.cssの変数を使用 */
+    width: 65%;
+}
+
+/* =========================================
+   4. Smartphone Styles (max-width: 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    /* カード全体の余白調整 */
+    .profile-card {
+        flex-direction: column; /* 縦並びにする */
+        gap: 30px;
+        margin: 30px 20px 80px; /* 左右に余白 */
+        padding: 40px 20px;
+    }
+
+    /* タイトルのスマホ調整 */
+    #profile-title {
+        font-size: 3.5rem;
+        margin: 40px auto 20px;
+    }
+
+    /* 写真サイズ調整 */
+    .profile-photo-area img {
+        width: 220px;
+        height: 220px;
+        margin-top: 50px;
+    }
+
+    /* 情報エリア調整 */
+    .profile-info-area {
+        width: 100%;
+        text-align: center; /* スマホでは中央揃えの方が見やすい場合が多い */
+    }
+
+    .profile-info-area h2 {
+        font-size: 3rem;
+        margin-bottom: 25px;
+        padding-right: 0;
+        display: block; /* 中央揃えのためにブロック要素的に扱う */
+    }
+
+    /* 詳細リストのスマホ対応 */
+    .detail-item {
+        flex-direction: column; /* 項目名と内容を縦積みに */
+        align-items: flex-start;
+        text-align: left; /* テキストは左揃えに戻す */
+    }
+
+    .detail-item dt {
+        width: 100%;
+        font-size: 1.2rem;
+        color: var(--green); /* スマホで見出しを目立たせる色変更 */
+        margin-bottom: 0.3rem;
+    }
+
+    .detail-item dd {
+        width: 100%;
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
+}

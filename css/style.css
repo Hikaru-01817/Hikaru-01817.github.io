@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==================================================
-    VARIABLES (COLOR DEFINITIONS)
+   VARIABLES (COLOR DEFINITIONS)
    ================================================== */
 :root {
     --light-green: #d5edeb;
@@ -14,7 +14,7 @@
 }
 
 /* ==================================================
-    COMMON & RESET
+   COMMON & RESET
    ================================================== */
 body {
     line-height: 1.7;
@@ -50,7 +50,7 @@ img {
 }
 
 /* ==================================================
-    LOADING SCREEN
+   LOADING SCREEN
    ================================================== */
 #loading {
     width: 100vw;
@@ -73,7 +73,7 @@ img {
 }
 
 /* ==================================================
-    NAVIGATION (SLIDE MENU)
+   NAVIGATION (SLIDE MENU)
    ================================================== */
 .btn-menu {
     position: fixed;
@@ -131,7 +131,7 @@ img {
 }
 
 /* ==================================================
-    HOME / HERO SECTION
+   HOME / HERO SECTION
    ================================================== */
 .start {
     scroll-snap-align: start;
@@ -180,11 +180,12 @@ img {
 }
 
 /* ==================================================
-    ACTIVITY SECTION (index.html)
+   ACTIVITY SECTION (index.html)
    ================================================== */
 .activity {
     height: auto;
     display: block;
+    border: 1px solid var(---navy);
 }
 .activity-head {
     background-color: var(---navy);
@@ -199,70 +200,96 @@ img {
     margin: 30px auto 60px;
 }
 
-/* Main Content Card */
+/* Main Content Card - REFINED DESIGN */
 .activity-main {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; 
-    gap: 35px;
-    max-width: 1300px;
+    align-items: stretch; /* 高さを揃える */
+    gap: 0; /* 画像とテキストの隙間をなくす */
+    max-width: 1300px; /* 幅を1100pxから1300pxに拡大 */
     margin: 0 auto 100px;
-    padding: 30px;
-    flex-wrap: wrap;
-    border: 1px solid var(---navy);
-    border-radius: 17px;
+    padding: 0; /* 内部余白を削除（画像のため） */
+    
+    /* カードスタイル */
+    background-color: #ffffff; /* 白背景 */
+    border: 2px solid var(---navy);
+    border-radius: 20px; /* 角丸を少し大きく */
+    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); /* 柔らかい影 */
+    overflow: hidden; /* 画像のはみ出し防止 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image Styling */
+/* ホバー時の動き */
+.activity-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px -10px rgba(4, 49, 75, 0.25);
+}
+
+/* Image Styling - Full Height */
 .activity-img {
-    flex: 1 1 45%;
-    max-width: 450px;
-    height: 300px; /* 固定高さ */
-    width: 100%;
+    flex: 0 0 50%; /* 幅を50%に固定 */
+    width: 50%;
+    height: auto; /* 高さは自動調整だが親に追従させる */
+    min-height: 350px; /* 最小高さを確保 */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0; /* 角丸は親要素に任せる */
 }
 
 /* Text Content Styling */
 .activity-main > div {
-    flex: 1 1 50%;
+    flex: 1; /* 残りの幅を使用 */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 40px 50px; /* テキスト周りにたっぷり余白を取る */
 }
+
+/* 偶数番目のレイアウト（画像右・テキスト左） */
+.activity-main:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 .activity-name {
     font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 12px;
+    color: var(---navy);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-green); /* アクセントライン */
+    display: inline-block;
+    padding-bottom: 5px;
+    width: fit-content;
 }
 .activity-article {
-    font-size: 1.4rem;
-    line-height: 1.7;
+    font-size: 1.1rem; /* 少し小さくして上品に */
+    line-height: 2;
+    color: #555; /* 真っ黒ではなく少しグレーに */
 }
 
 /* Learn more Button */
 .activity-article a {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 30px;
-    font-size: 1.4rem;
+    margin-top: 25px;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
     color: var(---navy);
-    border: 1px solid var(---navy);
+    border: 2px solid var(---navy);
     border-radius: 50px;
     transition: all 0.3s ease;
     background-color: transparent;
+    letter-spacing: 1px;
 }
 .activity-article a:hover {
     color: var(--white);
     background-color: var(---navy);
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(4, 49, 75, 0.2);
     text-decoration: none;
 }
 
 /* ==================================================
-    BLOG SECTION (activity.html)
+   BLOG SECTION (activity.html)
    ================================================== */
 .blog-head {
     background-color: var(---navy);
@@ -328,7 +355,7 @@ img {
 }
 
 /* ==================================================
-    FOOTER
+   FOOTER
    ================================================== */
 .end {
     scroll-snap-align: end;
@@ -370,7 +397,7 @@ footer p {
 }
 
 /* ==================================================
-    RESPONSIVE (Max-width: 768px)
+   RESPONSIVE (Max-width: 768px)
    ================================================== */
 @media screen and (max-width: 768px) {
     /* Loading */
@@ -391,29 +418,37 @@ footer p {
     }
 
     .activity-main {
-        flex-direction: column;
-        margin: 0 20px 50px;
-        padding: 20px;
+        flex-direction: column; /* 縦並び */
+        max-width: 90%; /* 幅を調整 */
+        margin: 0 auto 50px;
+        height: auto;
     }
     
-    /* Reverse order for alternating layouts */
+    /* スマホでは画像順序を統一（常に画像が上） */
+    .activity-main:nth-child(even) {
+        flex-direction: column;
+    }
     .activity-main:has(div + img) {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* 画像が下にあるHTML構造の場合、逆にして画像を上に */
     }
 
     .activity-img {
-        max-width: 300px;           
-        max-height: 200px;
-        margin: 10px auto 20px;
-        object-fit: cover;
+        width: 100%; /* 横幅いっぱい */
+        height: 250px; /* 高さを固定 */
+        flex: none;
+    }
+
+    .activity-main > div {
+        padding: 30px 20px; /* テキストエリアの余白調整 */
     }
 
     .activity-name {
         font-size: 1.8rem;
+        margin-bottom: 15px;
     }
 
     .activity-article {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     /* Footer */

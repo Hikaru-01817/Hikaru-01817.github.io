@@ -399,6 +399,19 @@ footer p {
    RESPONSIVE (Max-width: 768px)
    ================================================== */
 @media screen and (max-width: 768px) {
+    /* ★追加・修正箇所: スマホでのスクロールスナップ無効化 */
+    .container {
+        scroll-snap-type: none; /* スナップを無効にする */
+        height: auto;           /* 固定高さを解除し、コンテンツに合わせて伸ばす */
+        overflow: visible;      /* コンテナ内スクロールではなく、ページ全体のスクロールにする */
+    }
+    
+    .start {
+        height: auto;           
+        min-height: 100vh;      
+        scroll-snap-align: none;
+    }
+
     /* Loading */
     #loading img {
         width: 100%;

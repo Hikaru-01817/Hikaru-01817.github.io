@@ -173,7 +173,7 @@ img {
     text-align: center;
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
-    font-size: max(10rem, 3rem);
+    font-size: max(9.5rem, 3rem);
     padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -211,10 +211,10 @@ img {
     padding: 0; /* 内部余白を削除（画像のため） */
     
     /* カードスタイル */
-    background-color: #ffffff; /* 白背景 */
+    background-color: #ffffff; 
     border: 2px solid var(---navy);
-    border-radius: 20px; /* 角丸を少し大きく */
-    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); /* 柔らかい影 */
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); 
     overflow: hidden; /* 画像のはみ出し防止 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -229,10 +229,10 @@ img {
 .activity-img {
     flex: 0 0 50%; /* 幅を50%に固定 */
     width: 50%;
-    height: auto; /* 高さは自動調整だが親に追従させる */
-    min-height: 350px; /* 最小高さを確保 */
+    height: auto;
+    min-height: 350px; 
     object-fit: cover;
-    border-radius: 0; /* 角丸は親要素に任せる */
+    border-radius: 0; 
 }
 
 /* Text Content Styling */
@@ -241,7 +241,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 50px; /* テキスト周りにたっぷり余白を取る */
+    padding: 40px 50px; 
 }
 
 /* 偶数番目のレイアウト（画像右・テキスト左） */
@@ -255,15 +255,15 @@ img {
     font-weight: bold;
     color: var(---navy);
     margin-bottom: 20px;
-    border-bottom: 2px solid var(--light-green); /* アクセントライン */
+    border-bottom: 2px solid var(--light-green);
     display: inline-block;
     padding-bottom: 5px;
     width: fit-content;
 }
 .activity-article {
-    font-size: 1.1rem; /* 少し小さくして上品に */
+    font-size: 1.1rem; 
     line-height: 2;
-    color: #555; /* 真っ黒ではなく少しグレーに */
+    color: #555;
 }
 
 /* Learn more Button */
@@ -418,8 +418,8 @@ footer p {
     }
 
     .activity-main {
-        flex-direction: column; /* 縦並び */
-        max-width: 90%; /* 幅を調整 */
+        flex-direction: column; 
+        max-width: 90%; 
         margin: 0 auto 50px;
         height: auto;
     }
@@ -433,13 +433,13 @@ footer p {
     }
 
     .activity-img {
-        width: 100%; /* 横幅いっぱい */
-        height: 250px; /* 高さを固定 */
+        width: 100%; 
+        height: 250px; 
         flex: none;
     }
 
     .activity-main > div {
-        padding: 30px 20px; /* テキストエリアの余白調整 */
+        padding: 30px 20px;
     }
 
     .activity-name {

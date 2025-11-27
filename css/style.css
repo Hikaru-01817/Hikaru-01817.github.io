@@ -185,7 +185,6 @@ img {
 .activity {
     height: auto;
     display: block;
-    border: 1px solid var(---navy);
 }
 .activity-head {
     background-color: var(---navy);
@@ -206,15 +205,15 @@ img {
     justify-content: space-between;
     align-items: stretch; /* 高さを揃える */
     gap: 0; /* 画像とテキストの隙間をなくす */
-    max-width: 1300px; /* 幅を1100pxから1300pxに拡大 */
+    max-width: 1300px; /* 幅を広げる */
     margin: 0 auto 100px;
     padding: 0; /* 内部余白を削除（画像のため） */
     
     /* カードスタイル */
     background-color: #ffffff; 
-    border: 2px solid var(---navy);
-    border-radius: 20px; 
-    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); 
+    border: 2px solid var(---navy); /* 枠線を追加 */
+    border-radius: 20px; /* 角丸 */
+    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); /* 影 */
     overflow: hidden; /* 画像のはみ出し防止 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -229,9 +228,9 @@ img {
 .activity-img {
     flex: 0 0 50%; /* 幅を50%に固定 */
     width: 50%;
-    height: auto;
+    height: 100%; /* 高さを100%にしてボックスに合わせる */
     min-height: 350px; 
-    object-fit: cover;
+    object-fit: cover; /* 枠に合わせてトリミング */
     border-radius: 0; 
 }
 
@@ -241,7 +240,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 50px; 
+    padding: 40px 50px; /* テキスト周りに余白 */
 }
 
 /* 偶数番目のレイアウト（画像右・テキスト左） */

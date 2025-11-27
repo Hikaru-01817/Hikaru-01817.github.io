@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task - DoyoLab</title>
+        <!--CSSリセット-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!--フォント１-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
+        <!--フォント２-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
+        
+        <!--共通CSS-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--Taskページ用新規CSS-->
+        <link rel="stylesheet" href="css/task.css">
+        
+        <!--共通スクリプト-->
+        <script src="js/script.js" defer></script>
+        <link rel="icon" type="image/png" href="images/favicon.svg">
+    </head>
+
+    <body id="task-page">
+
+        <!--ナビゲーションメニュー (共通)-->
+        <nav>
+            <button id="menu-open" class="btn-menu">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <title>メニューを開く</title>
+                    <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+                </svg>
+            </button>
+            <div id="menu-panel">
+                <button id="menu-close" class="btn-menu">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <title>メニューを閉じる</title>
+                        <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
+                    </svg>
+                </button>
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="mailto:r202301812fd@jinadai.jp">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--メインコンテンツ-->
+        <main class="container2">
+            <div class="blog-head"></div> <!-- 共通のデザインバー -->
+            
+            <h1 id="task-title">My Works</h1>
+
+            <!-- 作品 1: Webサイト -->
+            <div class="work-card fadein">
+                <!-- 画像エリア -->
+                <div class="work-img">
+                    <img src="images/Project Gene for clothing2.png" alt="Project Gene for clothing">
+                </div>
+                <!-- テキストエリア -->
+                <div class="work-contents">
+                    <h2>Project Gene for clothing</h2>
+                    <p class="work-category">Web Design / Coding</p>
+                    <p class="work-desc">
+                        「服の記憶とリメイクの過程を『遺伝子』として可視化するWebサイトです。デザインから実装まで一貫して制作しました。
+                        シンプルかつ物語性を感じるデザインをテーマに、素材の貢献度が一目で伝わるよう構成しています。
+                        特に貢献比率を示すグラフ表現や、各要素のアニメーションにこだわりました。」
+                    </p>
+                    <a href="https://hikaru-01817.github.io/Project_gene_for_clothing/" class="btn-link">View Site</a>
+                </div>
+            </div>
+
+            <!-- 作品 2: ポスター -->
+            <!--<div class="work-card fadein">
+                <div class="work-img">
+                    <img src="images/サーキュラーエコノミー.png" alt="Poster Design">
+                </div>
+                <div class="work-contents">
+                    <h2>Event Poster Design</h2>
+                    <p class="work-category">Graphic Design</p>
+                    <p class="work-desc">
+                        大学の学園祭イベント用のポスター制作を担当しました。
+                        ターゲット層である学生の目を引くよう、鮮やかな配色と太めのタイポグラフィを使用しています。
+                        情報の優先順位を整理し、パッと見て「いつ・どこで・何があるか」が伝わるデザインを心がけました。
+                    </p>
+                </div>
+            </div>-->
+
+        </main>
+
+        <!--フッター (共通)-->
+        <footer>
+            <div>
+                <ul class="footer-nav">
+                    <li><a href="mailto:r202301812fd@jinadai.jp">Contact</a></li>
+                    <li><a href="https://instagram.com/">Instagram</a></li>
+                </ul>
+                <p><small>&copy; 2025 Hikaru</small></p>
+            </div>
+        </footer>
+    </body>
+</html>

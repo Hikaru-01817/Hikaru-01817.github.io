@@ -28,9 +28,8 @@
     width: 100%;
     text-align: center;
     font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: 5rem; /* 大きさは維持 */
-    color: var(---navy);
-    margin: 50px auto 30px; /* 上下の余白 */
+    font-size: 5rem; 
+    margin: 50px auto 30px; 
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
     letter-spacing: 0.05em;
 }

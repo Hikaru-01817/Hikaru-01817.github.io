@@ -206,7 +206,7 @@ img {
     text-align: center;
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
-    font-size: max(9.5rem, 3rem);
+    font-size: max(9rem, 3rem);
     padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -480,7 +480,7 @@ footer p {
 
     /* Main Title */
     .title-inner {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         line-height: 1.3;
     }
 

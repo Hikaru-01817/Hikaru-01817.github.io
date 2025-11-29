@@ -114,6 +114,7 @@ img {
     background-color: var(---navy);
     box-shadow: 0 0 2rem var(--white);
     font-family: "M PLUS 1p", sans-serif;
+    border-radius: 17px;
     translate: 100vw;
 }
 .menu-list {
@@ -161,29 +162,29 @@ img {
     background-position: center;
     filter: blur(10px);
     opacity: 0;
-    /* 変更: 4枚 × 6秒 = 24秒でループ (以前は16秒) */
-    animation: slide-anime 24s infinite;
+    /* 変更: 4枚 × 5秒 = 20秒でループ*/
+    animation: slide-anime 20s infinite;
 }
 
-/* 各画像と遅延の設定 (6秒間隔) */
+/* 各画像と遅延の設定 (5秒間隔) */
 .bg-slide:nth-child(1) {
     background-image: url(../images/1.jpeg);
     animation-delay: 0s;
 }
 .bg-slide:nth-child(2) {
     background-image: url(../images/2.jpeg);
-    animation-delay: 6s; /* 変更: 4s -> 6s */
+    animation-delay: 5s; 
 }
 .bg-slide:nth-child(3) {
     background-image: url(../images/3.jpeg);
-    animation-delay: 12s; /* 変更: 8s -> 12s */
+    animation-delay: 10s; 
 }
 .bg-slide:nth-child(4) {
     background-image: url(../images/4.jpeg);
-    animation-delay: 18s; /* 変更: 12s -> 18s */
+    animation-delay: 15s; 
 }
 
-/* クロスフェードアニメーション (調整済み) */
+/* クロスフェードアニメーション */
 @keyframes slide-anime {
     0% { opacity: 0; }
     8% { opacity: 1; }   /* ふわっと表示 (約2秒かけて出現) */
@@ -205,7 +206,7 @@ img {
     text-align: center;
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
-    font-size: max(9.5rem, 3rem);
+    font-size: max(9rem, 3rem);
     padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -461,27 +462,27 @@ footer p {
         margin-top: 0.2rem;
     }
 
-    /* ★メニューパネルの幅をさらに小さく（40vw） */
+    /* ★メニューパネルの幅を小さく */
     #menu-panel {
         width: 40vw; /* 50vw -> 40vw に縮小 */
-        padding: 6rem 0.5rem 2rem; /* パディングも少し減らして文字スペースを確保 */
+        padding: 6rem 0.5rem 2rem; 
     }
 
     /* メニューリストの調整 */
     .menu-list li {
-        padding-left: 10px; /* 左インデントをさらに縮小 */
+        padding-left: 10px;
     }
     
     /* ★文字サイズを少し大きく */
     .menu-list a {
-        font-size: 1.4rem; /* 1.2rem -> 1.4rem に拡大 */
+        font-size: 1.4rem; 
     }
 
-    /* Main Title (スマホ用調整) */
+    /* Main Title (スマホ用調整: 巨大化してインパクトを出す) */
     .title-inner {
-        font-size: 13vw; /* 画面幅に合わせて巨大化 */
-        line-height: 1.1; /* 行間を詰める */
-        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* 影を強化 */
+        font-size: 13vw; /* ★ここを変更: 画面幅に合わせて巨大化 */
+        line-height: 1.1; /* ★ここを変更: 行間を詰める */
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* ★ここを追加: 影を強化 */
     }
 
     /* Activity Section */

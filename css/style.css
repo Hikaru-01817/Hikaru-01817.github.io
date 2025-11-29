@@ -399,11 +399,11 @@ footer p {
    RESPONSIVE (Max-width: 768px)
    ================================================== */
 @media screen and (max-width: 768px) {
-    /* ★追加・修正箇所: スマホでのスクロールスナップ無効化 */
+    /* スクロールスナップ無効化 */
     .container {
-        scroll-snap-type: none; /* スナップを無効にする */
-        height: auto;           /* 固定高さを解除し、コンテンツに合わせて伸ばす */
-        overflow: visible;      /* コンテナ内スクロールではなく、ページ全体のスクロールにする */
+        scroll-snap-type: none; 
+        height: auto;           
+        overflow: visible;      
     }
     
     .start {
@@ -415,6 +415,34 @@ footer p {
     /* Loading */
     #loading img {
         width: 100%;
+    }
+
+    /* メニューボタン */
+    .btn-menu {
+        width: 3rem;  
+        height: 3rem; 
+        padding: 0.5rem;
+    }
+    .btn-menu svg {
+        width: 1.5rem; 
+        height: 1.5rem;
+        margin-top: 0.2rem;
+    }
+
+    /* ★メニューパネルの幅をさらに小さく（40vw） */
+    #menu-panel {
+        width: 40vw; /* 50vw -> 40vw に縮小 */
+        padding: 6rem 0.5rem 2rem; /* パディングも少し減らして文字スペースを確保 */
+    }
+
+    /* メニューリストの調整 */
+    .menu-list li {
+        padding-left: 10px; /* 左インデントをさらに縮小 */
+    }
+    
+    /* ★文字サイズを少し大きく */
+    .menu-list a {
+        font-size: 1.4rem; /* 1.2rem -> 1.4rem に拡大 */
     }
 
     /* Main Title */
@@ -441,7 +469,7 @@ footer p {
         flex-direction: column;
     }
     .activity-main:has(div + img) {
-        flex-direction: column-reverse; /* 画像が下にあるHTML構造の場合、逆にして画像を上に */
+        flex-direction: column-reverse; 
     }
 
     .activity-img {

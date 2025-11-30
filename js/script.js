@@ -107,33 +107,36 @@ fadeElements.forEach((fadeElement) => {
     fadeObserver.observe(fadeElement);
 });
 
-// ★追加・修正: スマホ用横スクロールボタンの動作（ループ機能付き）
+// スマホ用横スクロールボタンの動作（ループ機能付き・中央停止）
 const scrollNextBtn = document.querySelector('#scroll-next');
 const scrollWrapper = document.querySelector('.activity-scroll-wrapper');
 
 if(scrollNextBtn && scrollWrapper) {
     scrollNextBtn.addEventListener('click', () => {
-        // カードの幅(85vw) + ギャップ(20px)
-        const scrollAmount = window.innerWidth * 0.85 + 20;
-        
-        // 現在のスクロール位置 + 表示領域の幅 = 現在見えている右端の位置
-        const currentRightPos = scrollWrapper.scrollLeft + scrollWrapper.clientWidth;
-        // コンテンツ全体の幅
-        const totalWidth = scrollWrapper.scrollWidth;
+        // カード要素をすべて取得
+        const cards = scrollWrapper.querySelectorAll('.activity-main');
+        if (cards.length === 0) return;
 
-        // 右端に到達しているか判定 (数ピクセルの誤差を許容)
-        if (currentRightPos >= totalWidth - 10) {
-            // 右端なら最初(左端)に戻る
-            scrollWrapper.scrollTo({
-                left: 0,
-                behavior: 'smooth'
-            });
-        } else {
-            // 右端でなければ次に進む
-            scrollWrapper.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+        // カード1枚分の幅 + ギャップ(20px)を計算
+        // cssで width: 85vw, gap: 20px となっている前提
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 20; 
+        const itemStride = cardWidth + gap;
+        
+        // 現在のスクロール位置から、何枚目（インデックス）にいるか計算
+        const currentScroll = scrollWrapper.scrollLeft;
+        const currentIndex = Math.round(currentScroll / itemStride);
+
+        // 次のインデックスを決定 (最後の次は0に戻る)
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= cards.length) {
+            nextIndex = 0;
         }
+
+        // 計算した位置へスクロール
+        scrollWrapper.scrollTo({
+            left: nextIndex * itemStride,
+            behavior: 'smooth'
+        });
     });
 }

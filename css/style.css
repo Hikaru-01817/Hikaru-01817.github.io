@@ -162,34 +162,34 @@ img {
     background-position: center;
     filter: blur(10px);
     opacity: 0;
-    /* 変更: 4枚 × 5秒 = 20秒でループ*/
-    animation: slide-anime 20s infinite;
+    /* 4枚 × 6秒 = 24秒でループ */
+    animation: slide-anime 24s infinite;
 }
 
-/* 各画像と遅延の設定 (5秒間隔) */
+/* 各画像と遅延の設定 */
 .bg-slide:nth-child(1) {
     background-image: url(../images/1.jpeg);
     animation-delay: 0s;
 }
 .bg-slide:nth-child(2) {
     background-image: url(../images/2.jpeg);
-    animation-delay: 5s; 
+    animation-delay: 6s; 
 }
 .bg-slide:nth-child(3) {
     background-image: url(../images/3.jpeg);
-    animation-delay: 10s; 
+    animation-delay: 12s; 
 }
 .bg-slide:nth-child(4) {
     background-image: url(../images/4.jpeg);
-    animation-delay: 15s; 
+    animation-delay: 18s; 
 }
 
 /* クロスフェードアニメーション */
 @keyframes slide-anime {
     0% { opacity: 0; }
-    8% { opacity: 1; }   /* ふわっと表示 (約2秒かけて出現) */
-    25% { opacity: 1; }  /* 次の画像が出るまで表示維持 */
-    33% { opacity: 0; }  /* ふわっと消える (約2秒かけて消失) */
+    8% { opacity: 1; }   
+    25% { opacity: 1; }  
+    33% { opacity: 0; }  
     100% { opacity: 0; }
 }
 
@@ -236,47 +236,43 @@ img {
 .activity-main {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* 高さを揃える */
-    gap: 0; /* 画像とテキストの隙間をなくす */
-    max-width: 1300px; /* 幅を広げる */
+    align-items: stretch;
+    gap: 0; 
+    max-width: 1300px;
     margin: 0 auto 100px;
-    padding: 0; /* 内部余白を削除（画像のため） */
+    padding: 0;
     
-    /* カードスタイル */
     background-color: #ffffff; 
-    border: 2px solid var(---navy); /* 枠線を追加 */
-    border-radius: 20px; /* 角丸 */
-    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15); /* 影 */
-    overflow: hidden; /* 画像のはみ出し防止 */
+    border: 2px solid var(---navy);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px -10px rgba(4, 49, 75, 0.15);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ホバー時の動き */
 .activity-main:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 50px -10px rgba(4, 49, 75, 0.25);
 }
 
-/* Image Styling - Full Height */
 .activity-img {
-    flex: 0 0 50%; /* 幅を50%に固定 */
+    flex: 0 0 50%;
     width: 50%;
-    height: 100%; /* 高さを100%にしてボックスに合わせる */
+    height: 100%;
     min-height: 350px; 
-    object-fit: cover; /* 枠に合わせてトリミング */
+    object-fit: cover;
     border-radius: 0; 
 }
 
-/* Text Content Styling */
 .activity-main > div {
-    flex: 1; /* 残りの幅を使用 */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 50px; /* テキスト周りに余白 */
+    padding: 40px 50px;
 }
 
-/* 偶数番目のレイアウト（画像右・テキスト左） */
+/* 偶数番目のレイアウト */
 .activity-main:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -298,7 +294,6 @@ img {
     color: #555;
 }
 
-/* Learn more Button */
 .activity-article a {
     display: inline-block;
     margin-top: 25px;
@@ -318,72 +313,6 @@ img {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(4, 49, 75, 0.2);
     text-decoration: none;
-}
-
-/* ==================================================
-   BLOG SECTION (activity.html)
-   ================================================== */
-.blog-head {
-    background-color: var(---navy);
-    height: 13px;
-}
-#blog-title {
-    font-family: "WDXL Lubrifont JP N", sans-serif;
-    font-size: 100px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 20px auto 100px; 
-}
-.blog {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #ffffffee;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    backdrop-filter: blur(4px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.blog:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-}
-.blog iframe {
-    flex: 1 1 40%;
-    max-width: 100%;
-    height: auto;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.blog-contents {
-    flex: 1 1 55%;
-    padding: 10px;
-}
-.blog-contents h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--brack);
-}
-.blog-contents p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: var(--brack);
-}
-.blog-img {
-    flex: 1 1 45%;
-    max-width: 470px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ==================================================
@@ -462,27 +391,25 @@ footer p {
         margin-top: 0.2rem;
     }
 
-    /* ★メニューパネルの幅を小さく */
+    /* メニューパネル */
     #menu-panel {
-        width: 40vw; /* 50vw -> 40vw に縮小 */
+        width: 40vw; 
         padding: 6rem 0.5rem 2rem; 
     }
 
-    /* メニューリストの調整 */
     .menu-list li {
         padding-left: 10px;
     }
     
-    /* ★文字サイズを少し大きく */
     .menu-list a {
         font-size: 1.4rem; 
     }
 
-    /* Main Title (スマホ用調整: 巨大化してインパクトを出す) */
+    /* Main Title */
     .title-inner {
-        font-size: 13vw; /* ★ここを変更: 画面幅に合わせて巨大化 */
-        line-height: 1.1; /* ★ここを変更: 行間を詰める */
-        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* ★ここを追加: 影を強化 */
+        font-size: 13vw;
+        line-height: 1.1; 
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* Activity Section */
@@ -498,7 +425,6 @@ footer p {
         height: auto;
     }
     
-    /* スマホでは画像順序を統一（常に画像が上） */
     .activity-main:nth-child(even) {
         flex-direction: column;
     }

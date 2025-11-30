@@ -3,25 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DoyoLab_activity</title>
+        <title>Circular Project - DoyoLab</title>
         <!--CSSリセット-->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <!--フォント１-->
+        <!--フォント-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
-        <!--フォント２-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
-        <!--CSS＋JavaScriptリンク-->
+        
+        <!--CSS-->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/activity.css"> <!-- 新規CSS -->
+        
         <script src="js/script.js" defer></script>
         <link rel="icon" type="image/png" href="images/favicon.svg">
     </head>
 
     <body id="activity-page">
-        <!--ナビゲーションメニュー-->
+        <!--ナビゲーション (共通) -->
         <nav>
             <button id="menu-open" class="btn-menu">
                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -45,131 +45,154 @@
         </nav>
 
         <!--ブログコンテンツ-->
-        <div class="container2">
-            <div class="blog-head"></div>
+        <main class="container2">
+            <div class="blog-head"></div> <!-- デザインバー -->
             <h1 id="blog-title">Circular Project</h1>
-            <!--1-->
-            <div class="blog">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="blog-contents">
+
+            <!-- 1 (動画) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.04.15</span>
+                <div class="blog-media">
+                    <iframe src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト事前調べ1</h2>
                     <p>サーキュラープロジェクトが実際に動き始めるのは5月からになるようなので、まず事前準備としてサーキュラーエコノミーについて調べてみました。
                         サーキュラーエコノミーでは従来の3R（Reduce ,Reuse ,Recycle ）だけではなく、
                         原材料の調達から製品デザインの段階から、リサイクル資源の活用を前提とした設計を行うことで廃棄物という概念をなくすことが目標だとわかりました。
-                        また、サーキュラーエコノミーの活動を行うことで脱炭素社会に向けた取り組みや廃棄物削減などのメリットがあるそうです。<br>
-                        ←東京都環境局の動画を参考にしました。</p>
+                        また、サーキュラーエコノミーの活動を行うことで脱炭素社会に向けた取り組みや廃棄物削減などのメリットがあるそうです。</p>
+                    <p><small>東京都環境局の動画を参考にしました。</small></p>
                 </div>
             </div>
-            <!--2-->
-            <div class="blog">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="blog-contents">
+
+            <!-- 2 (動画) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.04.22</span>
+                <div class="blog-media">
+                    <iframe src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト事前調べ2</h2>
                     <p>前回に引き続きサーキュラープロジェクトが始まる前の下準備として、今回はサーキュラーデザインについて調べてみました。
                         サーキュラーデザインは前回取り上げたサーキュラーエコノミーを実現させるためのデザインや考え方を指すようです。
                         この活動に既に取り組んでいる企業の一つであるNIKEは工場の床に落ちている廃棄物やくずを「宇宙ごみ」と表現し、これらを使用して作られた「スペースヒッピー」というスニーカーを開発しています。
-                        このように、企業がサーキュラーデザインに取り組んでいる例は珍しくないようです。
-                        <a href="https://green-note.life/7737/">参考サイト</a>
                     </p>
+                    <a href="https://green-note.life/7737/">参考サイト</a>
                 </div>
             </div>
-            <!--3-->
-            <div class="blog">
-                <img class="blog-img" src="images/2.jpeg" alt="">
-                <div class="blog-contents">
+
+            <!-- 3 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.05.23</span>
+                <div class="blog-media">
+                    <img src="images/2.jpeg" alt="サーキュラープロジェクト活動風景">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト1</h2>
                     <p>5/23日、第1回目のサーキュラープロジェクトが開始されました。
                         初回はロフトワークさんや、ダイイチさんから、サーキュラープロジェクトの概要やプロジェクトに使用する紙糸についての説明を受けました。
                         今回、使用する紙糸を用いて防暑対策をするということで、紙糸の特性である通気性を活かすのがカギであるような気がするので、
                         帽子やフードが良いのではないかという案が自分たちのグループで出されました。
-                        次回は2週間後となりますが、身の回りの紙製包装を探すなど課題もあるので早めに取り組んでいきたいです。
                     </p>
                 </div>
             </div>
-            <!--4-->
-            <div class="blog">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="blog-contents">
+
+            <!-- 4 (動画) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.05.30</span>
+                <div class="blog-media">
+                    <iframe src="https://www.youtube.com/embed/3Z4B_JxsZEg?si=l5cAdlreDdvntN3z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト事前調べ3</h2>
                     <p>今回はサーキュラープロジェクトで使用する紙糸の特性について調べました。
                         紙糸は紙をベースとしているため、紙繊維の構造により、通気性に優れ、湿気を吸収しやすい特徴があります。
                         また、自分自身、紙糸を実際に触って体感したこととして、強度が高いことも特徴がとして挙げられます。
-                        そのため、紙糸の特徴である通気性や強度を活かしつつ、防暑対策ができるものが、
-                        今回のプロジェクトにおいて相応しいですが、これらの特徴を踏まえた上で、自分的には帽子が相応しいと思いました。帽子は紙糸特徴を引き出しつつ、防暑対策に適しています。
-                        また実用面でも使いやすい点は帽子の優れている点であると思いました。
+                        そのため、紙糸の特徴である通気性や強度を活かしつつ、防暑対策ができるものが今回のプロジェクトにおいて相応しいと考えました。
                     </p>
                 </div>
             </div>
-            <!--5-->
-            <div class="blog">
-                <img class="blog-img" src="images/IMG_0705.PNG" alt="">
-                <div class="blog-contents">
+
+            <!-- 5 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.06.06</span>
+                <div class="blog-media">
+                    <img src="images/IMG_0705.PNG" alt="紙糸の特性研究">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト2</h2>
                     <p>6/6日、第2回目のサーキュラープロジェクトが行われました。
-                        今回のサーキュラープロジェクトの活動では、実際に紙糸を観察し、特性を研究しました。
-                        紙糸の特性を研究した結果、私たちのグループでは紙糸の通気性に注目して、ネクタイやスカーフ、扇子などがアイデアとして
-                        挙げられました。私たちのグループでは、一旦スカーフと扇子の作成を行うことになったので、中間発表まであと3週間ほどしかないので、
-                        早めにプロトタイミングを行って、中間発表に備えていきたいと思いました。
+                        今回の活動では、実際に紙糸を観察し、特性を研究しました。
+                        研究した結果、私たちのグループでは紙糸の通気性に注目して、ネクタイやスカーフ、扇子などがアイデアとして挙げられました。
+                        一旦スカーフと扇子の作成を行うことになったので、中間発表に向けて早めにプロトタイピングを行っていきたいです。
                     </p>
                 </div>
             </div>
-            <!--6-->
-            <div class="blog">
-                <img class="blog-img" src="images/IMG_0704.jpg" alt="">
-                <div class="blog-contents">
+
+            <!-- 6 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.06.27</span>
+                <div class="blog-media">
+                    <img src="images/IMG_0704.jpg" alt="中間発表の様子">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト3</h2>
-                    <p>6/27日、第3回目のサーキュラープロジェクトが行われました。
-                        第3回目のサーキュラープロジェクトでは中間発表を行いました。中間発表では、私たちのグループからはエアブリーズファンという名前の扇子や
-                        サンシェードフードという名前の持ち運びができるフードの発表を行いました。発表後、メンターの方にはもっと紙糸を利用している部分に時間を割くべきとの
-                        アドバイスを頂くことができたので、扇子に関してもフードに関しても、フレームの部分の作成は一旦終了させて、
+                    <p>6/27日、中間発表を行いました。私たちのグループからは「エアブリーズファン」という扇子や「サンシェードフード」という持ち運びができるフードの発表を行いました。
+                        発表後、メンターの方にはもっと紙糸を利用している部分に時間を割くべきとのアドバイスを頂くことができたので、
                         これからは紙糸を利用する部分にもっと時間をかけていこうと思います。
                     </p>
                 </div>
             </div>
-        </div>
-        <!--7-->
-            <div class="blog">
-                <img class="blog-img" src="images/IMG_0748.jpg" alt="">
-                <div class="blog-contents">
+
+            <!-- 7 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.07.10</span>
+                <div class="blog-media">
+                    <img src="images/IMG_0748.jpg" alt="制作中のフード">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト4</h2>
-                    <p>最終発表が迫る中、私たち1班は、中間発表で発表したフードの作成に集中することに決め、
-                        フードのフレームを作成する人と布部分を作成する人に分かれて作業を行いました。
-                        私はフードの布部分の作成を担当していて、布部分の作成にはフレームの寸法がある程度決まっていないとできない部分が多く、
-                        間に合うか不安ではありましたが、7月の前半のうちに布部分の作業とフレームの作業が、うまく進めることができたので、一旦フードを形にすることができました。
-                        しかし、最終発表が来週に控える中、まだまだブラッシュアップするべきところがあるので、効率良く作業を進めていきたいと思う。
+                    <p>最終発表が迫る中、私たち1班はフードの作成に集中することに決めました。
+                        私はフードの布部分の作成を担当しています。布部分の作成にはフレームの寸法が決まっていないとできない部分が多く不安でしたが、
+                        7月の前半のうちに布部分とフレームの作業をうまく進めることができ、一旦形にすることができました。
+                        最終発表が来週に控える中、まだまだブラッシュアップが必要です。
                     </p>
                 </div>
             </div>
-        </div>
-        <!--8-->
-            <div class="blog">
-                <img class="blog-img" src="images/IMG_0780.jpg" alt="">
-                <div class="blog-contents">
+
+            <!-- 8 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.07.18</span>
+                <div class="blog-media">
+                    <img src="images/IMG_0780.jpg" alt="最終発表の成果">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト5</h2>
-                    <p>7/18日、サーキュラープロジェクトの最終発表が行われました。
-                        フードのフレーム部分に追加することにした伸び縮みの機能の実装に少し手間がかかり、
-                        フードの完成がかなりギリギリになってしまいましたが、どうにか発表に間に合わせることができました。
-                        完成こそしたものの、もっとこの部分はこうしたかったと思う部分があり、少し悔しい思いをしましたが、発表の結果として、ベストアイデア賞をいただけたことは、
-                        斬新な暑熱対策グッズのアイデアを考え続けてきた1班にとっては、1番嬉しいことだったと思います。
-                        班のメンバーと協力して、1つの課題に時間をかけて取り組んだことは、大変な面もありましたが、とても楽しい経験になりました。<br>
-                        ←フードにファスナーを付けたイメージをAIに作ってもらった図
+                    <p>7/18日、最終発表が行われました。
+                        フレーム部分の機能実装に手間取り、完成がギリギリになってしまいましたが、なんとか発表に間に合いました。
+                        もっとこうしたかったという悔しい部分もありましたが、結果としてベストアイデア賞をいただけたことは、
+                        斬新な暑熱対策グッズのアイデアを考え続けてきた1班にとって一番嬉しいことでした。
                     </p>
                 </div>
             </div>
-        </div>
-        <!--9-->
-            <div class="blog">
-                <img class="blog-img" src="images/IMG_0828.png" alt="">
-                <div class="blog-contents">
+
+            <!-- 9 (画像) -->
+            <div class="blog-card fadein">
+                <span class="blog-date">2024.08.21</span>
+                <div class="blog-media">
+                    <img src="images/IMG_0828.png" alt="ダイイチ本社訪問">
+                </div>
+                <div class="blog-content">
                     <h2>サーキュラープロジェクト6</h2>
-                    <p>8月の前半にダイイチさんから招待され、ダイイチの本社に行き、そこで9/3の暑熱対策実証実験会で披露するために
-                        私たち1班が作成したフードのブラッシュアップをお願いされたので、8/21から1班はまた集まって作業を行いました。
-                        最終発表の時には、実現することができなかったことを中心に今回は作業を行っていきたいと考えています。
-                        暑熱対策実証実験会まで時間も限られているので、効率よく作業を行っていくために、本当に時間をかける必要がある部分だけを見極めて作業を行っていくつもりです。 
+                    <p>8月の前半にダイイチさんから招待され本社へ伺いました。
+                        そこで9/3の暑熱対策実証実験会で披露するために、私たちが作成したフードのブラッシュアップをお願いされました。
+                        最終発表の時には実現できなかったことを中心に、8/21からまた作業を行っています。
+                        実証実験会まで時間が限られているので、効率よく作業を行っていく予定です。
                     </p>
                 </div>
             </div>
-        </div>
+
+        </main>
 
         <!--フッター-->
         <footer>

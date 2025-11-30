@@ -417,7 +417,7 @@ footer p {
         margin: 40px auto;
     }
 
-    /* ★横スクロール用コンテナの設定 (スマホのみ) */
+    /* 横スクロール用コンテナの設定 (スマホのみ) */
     .activity-scroll-wrapper {
         display: flex;
         overflow-x: auto;
@@ -428,7 +428,7 @@ footer p {
         width: 100%;
     }
 
-    /* ★横スクロール内のカード設定 */
+    /* 横スクロール内のカード設定 */
     .activity-main {
         flex: 0 0 85vw; 
         width: 85vw;

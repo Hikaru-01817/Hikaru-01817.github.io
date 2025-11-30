@@ -107,7 +107,7 @@ fadeElements.forEach((fadeElement) => {
     fadeObserver.observe(fadeElement);
 });
 
-// スマホ用横スクロールボタンの動作
+// ★追加・修正: スマホ用横スクロールボタンの動作（ループ機能付き）
 const scrollNextBtn = document.querySelector('#scroll-next');
 const scrollWrapper = document.querySelector('.activity-scroll-wrapper');
 
@@ -116,9 +116,24 @@ if(scrollNextBtn && scrollWrapper) {
         // カードの幅(85vw) + ギャップ(20px)
         const scrollAmount = window.innerWidth * 0.85 + 20;
         
-        scrollWrapper.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
+        // 現在のスクロール位置 + 表示領域の幅 = 現在見えている右端の位置
+        const currentRightPos = scrollWrapper.scrollLeft + scrollWrapper.clientWidth;
+        // コンテンツ全体の幅
+        const totalWidth = scrollWrapper.scrollWidth;
+
+        // 右端に到達しているか判定 (数ピクセルの誤差を許容)
+        if (currentRightPos >= totalWidth - 10) {
+            // 右端なら最初(左端)に戻る
+            scrollWrapper.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // 右端でなければ次に進む
+            scrollWrapper.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
     });
 }

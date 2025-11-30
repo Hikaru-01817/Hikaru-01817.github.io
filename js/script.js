@@ -106,3 +106,19 @@ const fadeElements = document.querySelectorAll('.fadein');
 fadeElements.forEach((fadeElement) => {
     fadeObserver.observe(fadeElement);
 });
+
+// スマホ用横スクロールボタンの動作
+const scrollNextBtn = document.querySelector('#scroll-next');
+const scrollWrapper = document.querySelector('.activity-scroll-wrapper');
+
+if(scrollNextBtn && scrollWrapper) {
+    scrollNextBtn.addEventListener('click', () => {
+        // カードの幅(85vw) + ギャップ(20px)
+        const scrollAmount = window.innerWidth * 0.85 + 20;
+        
+        scrollWrapper.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+}

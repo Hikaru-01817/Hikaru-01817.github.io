@@ -229,7 +229,6 @@ img {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 70px;
     text-align: center;
-    letter-spacing: 0.05em;
     margin: 30px auto 60px;
 }
 
@@ -415,16 +414,32 @@ footer p {
     /* Activity Section */
     .activity-header {
         font-size: 2.8rem;
-        margin: 60px auto;
+        margin: 40px auto;
     }
 
+    /* ★横スクロール用コンテナの設定 (スマホのみ) */
+    .activity-scroll-wrapper {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px 5vw 50px; 
+        scroll-snap-type: x mandatory; /* スクロールスナップ */
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    /* ★横スクロール内のカード設定 */
     .activity-main {
+        flex: 0 0 85vw; 
+        width: 85vw;
+        max-width: 85vw;
+        margin: 0; /* マージンリセット */
+        scroll-snap-align: center; 
         flex-direction: column; 
-        max-width: 90%; 
-        margin: 0 auto 50px;
         height: auto;
     }
     
+    /* スマホでは画像順序を統一（常に画像が上） */
     .activity-main:nth-child(even) {
         flex-direction: column;
     }

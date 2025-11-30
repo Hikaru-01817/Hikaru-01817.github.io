@@ -229,6 +229,7 @@ img {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 70px;
     text-align: center;
+    letter-spacing: 0.05em;
     margin: 30px auto 60px;
 }
 

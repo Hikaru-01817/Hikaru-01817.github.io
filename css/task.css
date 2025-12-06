@@ -73,6 +73,9 @@
     margin-bottom: 10px;
     line-height: 1.2;
 }
+.work-contents a {
+    font-family: "M PLUS 1p", sans-serif; 
+}
 
 /* カテゴリータグ */
 .work-category {

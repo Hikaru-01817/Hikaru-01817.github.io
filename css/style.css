@@ -438,7 +438,7 @@ footer p {
 
     /* タイトルエリアの高さ調整と配置方法の修正 */
     #page-title {
-        height: 100svh; /* スマホ画面の高さピッタリに設定 */
+        height: 100dvh; /* スマホ画面の高さピッタリに設定 */
         position: absolute; 
         top: 0;
         left: 0;

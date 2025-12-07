@@ -436,10 +436,10 @@ footer p {
         font-size: 1.4rem; 
     }
 
-    /* ★変更: タイトルエリアの高さ調整と配置方法の修正 */
+    /* タイトルエリアの高さ調整と配置方法の修正 */
     #page-title {
-        height: 100dvh; /* スマホ画面の高さピッタリに設定 */
-        position: absolute; /* 親要素に対して絶対配置 */
+        height: 100svh; /* スマホ画面の高さピッタリに設定 */
+        position: absolute; 
         top: 0;
         left: 0;
         width: 100%;

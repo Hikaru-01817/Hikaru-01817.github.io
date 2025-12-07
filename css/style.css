@@ -196,7 +196,7 @@ img {
 /* Page Title */
 #page-title {
     position: sticky;
-    height: 100dvh;
+    height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;

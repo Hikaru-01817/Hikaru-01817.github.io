@@ -394,16 +394,22 @@ footer p {
 @media screen and (max-width: 768px) {
     /* スクロールスナップ設定の修正 */
     .container {
-        scroll-snap-type: y mandatory; /* 有効化 */
-        height: 100dvh;                /* 高さ固定 */
-        overflow-y: scroll;            /* 縦スクロール */
+        /* mandatoryからproximityに変更: スナップ点に近い時だけ吸着 */
+        scroll-snap-type: y proximity; 
+        height: 100dvh;                
+        overflow-y: scroll;            
     }
     
     .start {
-        height: auto;           /* 内容に応じて伸びるようにする */
-        min-height: 100dvh;     /* 最低でも1画面分は確保 */
-        scroll-snap-align: start; /* スナップ有効化 */
-        overflow: visible;      /* 重要: はみ出した中身（活動紹介）を切らないように表示 */
+        height: auto;           
+        min-height: 100dvh;     
+        scroll-snap-align: start; 
+        overflow: visible;      
+    }
+
+    /* フッターのスナップを無効化 */
+    .end {
+        scroll-snap-align: none;
     }
 
     /* Loading */

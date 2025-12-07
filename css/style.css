@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==================================================
-   VARIABLES (COLOR DEFINITIONS)
+    VARIABLES (COLOR DEFINITIONS)
    ================================================== */
 :root {
     --light-green: #d5edeb;
@@ -14,7 +14,7 @@
 }
 
 /* ==================================================
-   COMMON & RESET
+    COMMON & RESET
    ================================================== */
 body {
     line-height: 1.7;
@@ -50,7 +50,7 @@ img {
 }
 
 /* ==================================================
-   LOADING SCREEN
+    LOADING SCREEN
    ================================================== */
 #loading {
     width: 100vw;
@@ -73,7 +73,7 @@ img {
 }
 
 /* ==================================================
-   NAVIGATION (SLIDE MENU)
+    NAVIGATION (SLIDE MENU)
    ================================================== */
 .btn-menu {
     position: fixed;
@@ -132,7 +132,7 @@ img {
 }
 
 /* ==================================================
-   HOME / HERO SECTION
+    HOME / HERO SECTION
    ================================================== */
 .start {
     scroll-snap-align: start;
@@ -207,13 +207,12 @@ img {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
     font-size: max(9rem, 3rem);
-    padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* ==================================================
-   ACTIVITY SECTION (index.html)
+    ACTIVITY SECTION (index.html)
    ================================================== */
 .activity {
     height: auto;
@@ -229,6 +228,7 @@ img {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 70px;
     text-align: center;
+    letter-spacing: 1.5px; 
     margin: 30px auto 60px;
 }
 
@@ -320,7 +320,7 @@ img {
 }
 
 /* ==================================================
-   FOOTER
+    FOOTER
    ================================================== */
 .end {
     scroll-snap-align: end;
@@ -400,8 +400,8 @@ footer p {
     }
     
     .start {
-        height: 100dvh; /* アドレスバーを考慮した高さ */
-        min-height: 100dvh;      
+        height: auto;           
+        min-height: 100vh;      
         scroll-snap-align: none;
     }
 
@@ -436,19 +436,10 @@ footer p {
         font-size: 1.4rem; 
     }
 
-    /* タイトルエリアの高さ調整と配置方法の修正 */
-    #page-title {
-        height: 100dvh; /* スマホ画面の高さピッタリに設定 */
-        position: absolute; 
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
     /* Main Title */
     .title-inner {
-        font-size: 14vw; 
-        line-height: 1.25; 
+        font-size: 14vw;
+        line-height: 1.25;
         text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); 
     }
 
@@ -479,8 +470,8 @@ footer p {
         flex: 0 0 85vw; 
         width: 85vw;
         max-width: 85vw;
-        margin: 0; 
-        scroll-snap-align: center; 
+        margin: 0; /* マージンリセット */
+        scroll-snap-align: center; /* 中央で止まる */
         flex-direction: column; 
         height: auto;
     }

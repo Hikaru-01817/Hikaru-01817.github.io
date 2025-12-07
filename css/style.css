@@ -207,7 +207,6 @@ img {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     color: var(--white);
     font-size: max(9rem, 3rem);
-    padding-bottom: 10px;
     line-height: 1.2;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }

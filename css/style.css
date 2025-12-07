@@ -439,6 +439,7 @@ footer p {
     /* Main Title */
     .title-inner {
         font-size: 14vw;
+        line-height: 1.3;
         text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); 
     }
 

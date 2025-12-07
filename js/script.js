@@ -140,7 +140,7 @@ if(scrollNextBtn && scrollWrapper) {
     });
 }
 
-// ★追加: スマホ用横スクロールボタンの動作（Taskページ用）
+// スマホ用横スクロールボタンの動作（Taskページ用）
 const taskScrollNextBtn = document.querySelector('#task-scroll-next');
 const taskScrollWrapper = document.querySelector('.task-scroll-wrapper');
 

@@ -107,7 +107,7 @@ fadeElements.forEach((fadeElement) => {
     fadeObserver.observe(fadeElement);
 });
 
-// スマホ用横スクロールボタンの動作（ループ機能付き・中央停止）
+// スマホ用横スクロールボタンの動作（Activityページ用）
 const scrollNextBtn = document.querySelector('#scroll-next');
 const scrollWrapper = document.querySelector('.activity-scroll-wrapper');
 
@@ -118,7 +118,6 @@ if(scrollNextBtn && scrollWrapper) {
         if (cards.length === 0) return;
 
         // カード1枚分の幅 + ギャップ(20px)を計算
-        // cssで width: 85vw, gap: 20px となっている前提
         const cardWidth = cards[0].offsetWidth;
         const gap = 20; 
         const itemStride = cardWidth + gap;
@@ -135,6 +134,40 @@ if(scrollNextBtn && scrollWrapper) {
 
         // 計算した位置へスクロール
         scrollWrapper.scrollTo({
+            left: nextIndex * itemStride,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// ★追加: スマホ用横スクロールボタンの動作（Taskページ用）
+const taskScrollNextBtn = document.querySelector('#task-scroll-next');
+const taskScrollWrapper = document.querySelector('.task-scroll-wrapper');
+
+if(taskScrollNextBtn && taskScrollWrapper) {
+    taskScrollNextBtn.addEventListener('click', () => {
+        // カード要素をすべて取得
+        const cards = taskScrollWrapper.querySelectorAll('.work-card');
+        if (cards.length === 0) return;
+
+        // カード1枚分の幅 + ギャップ(20px)を計算
+        // cssで width: 85vw, gap: 20px となっている前提
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 20; 
+        const itemStride = cardWidth + gap;
+        
+        // 現在のスクロール位置から、何枚目（インデックス）にいるか計算
+        const currentScroll = taskScrollWrapper.scrollLeft;
+        const currentIndex = Math.round(currentScroll / itemStride);
+
+        // 次のインデックスを決定 (最後の次は0に戻る)
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= cards.length) {
+            nextIndex = 0;
+        }
+
+        // 計算した位置へスクロール
+        taskScrollWrapper.scrollTo({
             left: nextIndex * itemStride,
             behavior: 'smooth'
         });

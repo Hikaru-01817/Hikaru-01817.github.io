@@ -57,41 +57,55 @@
             
             <h1 id="task-title">My Works</h1>
 
-            <!-- 作品 1: Webサービス -->
-            <div class="work-card fadein">
-                <!-- 画像エリア -->
-                <div class="work-img">
-                    <img src="images/Project Gene for clothing2.png" alt="Project Gene for clothing">
-                </div>
-                <!-- テキストエリア -->
-                <div class="work-contents">
-                    <h2>Project Gene for clothing</h2>
-                    <p class="work-category">Web Design / Coding</p>
-                    <p class="work-desc">
-                        服の記憶とリメイクの過程を「遺伝子」として可視化するWebサービスです。デザインから実装まで一貫して制作しました。
-                        シンプルかつ物語性を感じるデザインをテーマに、素材の貢献度が一目で伝わるよう構成しています。
-                        特に貢献比率を示すグラフ表現や、各要素のアニメーションにこだわりました。
-                    </p>
-                    <a href="https://hikaru-01817.github.io/Project_gene_for_clothing/" class="btn-link">View Site</a>
-                </div>
-            </div>
+            <!-- スクロール用のコンテナとラッパー -->
+            <div class="task-scroll-container">
+                <div class="task-scroll-wrapper">
+                    
+                    <!-- 作品 1: Webサービス -->
+                    <div class="work-card fadein">
+                        <!-- 画像エリア -->
+                        <div class="work-img">
+                            <img src="images/Project Gene for clothing2.png" alt="Project Gene for clothing">
+                        </div>
+                        <!-- テキストエリア -->
+                        <div class="work-contents">
+                            <h2>Project Gene for clothing</h2>
+                            <p class="work-category">Web Design / Coding</p>
+                            <p class="work-desc">
+                                服の記憶とリメイクの過程を「遺伝子」として可視化するWebサービスです。デザインから実装まで一貫して制作しました。
+                                シンプルかつ物語性を感じるデザインをテーマに、素材の貢献度が一目で伝わるよう構成しています。
+                                特に貢献比率を示すグラフ表現や、各要素のアニメーションにこだわりました。
+                            </p>
+                            <a href="https://hikaru-01817.github.io/Project_gene_for_clothing/" class="btn-link">View Site</a>
+                        </div>
+                    </div>
 
-            <!-- 作品 2: 企業WEBサイト -->
-            <div class="work-card fadein">
-                <div class="work-img">
-                    <img src="images/Gemini_Generated_Image_jrvle8jrvle8jrvl.png" alt="Poster Design">
-                </div>
-                <div class="work-contents">
-                    <h2>M.S Future Life</h2>
-                    <p class="work-category">Web Design / Coding</p>
-                    <p class="work-desc">
-                        マンション管理支援を行っている有限会社M.S Future LifeさんのWEBサイトの制作を担当しました。
-                        比較的年齢層が高い方がサイトを見ることを想定しているので文字を大きく見やすいように作りました。
-                        必須となる機能を実装しつつ、情報の優先順位を整理し、パッと見て必要な情報すぐが伝わるようにシンプルなデザインを心がけました。
-                    </p>
-                    <a href="https://msfuturelife.jp/" class="btn-link">View Site</a>
-                </div>
-            </div>
+                    <!-- 作品 2: 企業WEBサイト -->
+                    <div class="work-card fadein">
+                        <div class="work-img">
+                            <img src="images/Gemini_Generated_Image_jrvle8jrvle8jrvl.png" alt="Poster Design">
+                        </div>
+                        <div class="work-contents">
+                            <h2>M.S Future Life</h2>
+                            <p class="work-category">Web Design / Coding</p>
+                            <p class="work-desc">
+                                マンション管理支援を行っている有限会社M.S Future LifeさんのWEBサイトの制作を担当しました。
+                                比較的年齢層が高い方がサイトを見ることを想定しているので文字を大きく見やすいように作りました。
+                                必須となる機能を実装しつつ、情報の優先順位を整理し、パッと見て必要な情報すぐに伝わるようにシンプルなデザインを心がけました。
+                            </p>
+                            <a href="https://msfuturelife.jp/" class="btn-link">View Site</a>
+                        </div>
+                    </div>
+
+                </div> <!-- End .task-scroll-wrapper -->
+
+                <!-- 横スクロール用のボタン (スマホのみCSSで表示) -->
+                <button id="task-scroll-next" class="scroll-btn" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div> <!-- End .task-scroll-container -->
 
             <!-- ホームに戻るボタン -->
             <div class="footer-home-btn">

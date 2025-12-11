@@ -224,12 +224,15 @@ img {
     height: 15px;
 }
 
-/* Header */
+/* Header (変更点: 下線を追加) */
 .activity-header {
     font-family: "WDXL Lubrifont JP N", sans-serif;
     font-size: 70px;
     text-align: center;
     margin: 30px auto 60px;
+    border-bottom: 3px solid var(--light-green);
+    padding-bottom: 10px;
+    width: fit-content; /* 文字の幅に合わせる */
 }
 
 /* Main Content Card - REFINED DESIGN */
@@ -394,7 +397,9 @@ footer p {
 @media screen and (max-width: 768px) {
     /* スクロールスナップ設定の修正 */
     .container {
-        /* mandatoryからproximityに変更: スナップ点に近い時だけ吸着 */
+        /* mandatoryからproximityに変更: 
+           これにより、スナップ点に近い時だけ吸着し、
+           コンテンツの途中では自由にスクロールできるようになります */
         scroll-snap-type: y proximity; 
         height: 100dvh;                
         overflow-y: scroll;            

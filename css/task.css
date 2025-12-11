@@ -12,6 +12,9 @@
     margin: 50px auto 80px;
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
     letter-spacing: 0.05em;
+    border-bottom: 3px solid var(--light-green);
+    padding-bottom: 10px;
+    width: fit-content;
 }
 
 /* 作品カード (Activityの改良版デザインを継承) */

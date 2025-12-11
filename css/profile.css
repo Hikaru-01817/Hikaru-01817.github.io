@@ -32,6 +32,9 @@
     margin: 50px auto 30px; 
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
     letter-spacing: 0.05em;
+    border-bottom: 3px solid var(--light-green);
+    padding-bottom: 5px;
+    width: fit-content; /* 文字の幅に合わせる */
 }
 
 /* 1. 写真エリア */

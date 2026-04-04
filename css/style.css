@@ -397,9 +397,6 @@ footer p {
 @media screen and (max-width: 768px) {
     /* スクロールスナップ設定の修正 */
     .container {
-        /* mandatoryからproximityに変更: 
-           これにより、スナップ点に近い時だけ吸着し、
-           コンテンツの途中では自由にスクロールできるようになります */
         scroll-snap-type: y proximity; 
         height: 100dvh;                
         overflow-y: scroll;            
@@ -474,7 +471,7 @@ footer p {
         margin: 40px auto;
     }
 
-    /* 横スクロール用コンテナの設定 (スマホのみ) */
+    /* 横スクロール用コンテナの設定 */
     .activity-scroll-wrapper {
         display: flex;
         overflow-x: auto;
@@ -497,7 +494,7 @@ footer p {
         height: auto;
     }
     
-    /* スマホでは画像順序を統一（常に画像が上） */
+    /* スマホでは画像順序を統一 */
     .activity-main:nth-child(even) {
         flex-direction: column;
     }
@@ -524,7 +521,7 @@ footer p {
         font-size: 1rem;
     }
 
-    /* スクロールボタンのスタイル (スマホのみ表示) */
+    /* スクロールボタンのスタイル */
     .scroll-btn {
         display: flex;
         align-items: center;

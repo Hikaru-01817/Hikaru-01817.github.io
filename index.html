@@ -1,147 +1,222 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Creative Activity</title>
-        <!--CSSリセット-->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <!--フォント１-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
-        <!--フォント２-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
-        <!--CSS＋JavaScriptリンク-->
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
-        <link rel="icon" type="image/png" href="images/favicon.svg">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikaru Creative Portfolio</title>
+    <meta name="description" content="ゼミ活動・Web制作・ブラウザゲーム制作をまとめたHikaruのクリエイティブポートフォリオです。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <div id="loading" aria-hidden="true">
+        <img src="images/Logo2.png" alt="">
+    </div>
 
-    <body>
-        <!--ローディング画面遷移-->
-        <div id="loading">
-            <img src="images/Logo2.png" alt="Logo">
-            <div id="loading-screen"></div>
-        </div>
-
-        <!--ナビゲーションメニュー-->
-        <nav>
-            <button id="menu-open" class="btn-menu">
-                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <title>メニューを開く</title>
-                    <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
-                </svg>
-            </button>
-            <div id="menu-panel">
-                <button id="menu-close" class="btn-menu">
-                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <title>メニューを閉じる</title>
-                        <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
-                    </svg>
-                </button>
-                <ul class="menu-list">
-                    <li><a href="#1">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="#3">Activity</a></li>
-                    <li><a href="https://www.instagram.com/_hika117/?igsh=N29tMnBzamo3aW5p&utm_source=qr#">Instagram</a></li>
-                    <li><a href="mailto:r202301812fd@jinadai.jp">Contact</a></li>
-                </ul>
-            </div>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Hikaru Creative Portfolio Home">
+            <span class="brand-mark brand-photo"><img src="images/IMG_3732.jpeg" alt="Hikaru"></span>
+            <span>Hikaru</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+            <a href="index.html">Home</a>
+            <a href="index.html#activity">Activity</a>
+            <a href="profile.html">Profile</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
+    </header>
 
-        <!--メイン-->
-        <main class="container">
-
-            <!--タイトル-->
-            <section id="1" class="start">
-                <div id="bg-slider">
-                    <div class="bg-slide"></div>
-                    <div class="bg-slide"></div>
-                    <div class="bg-slide"></div>
-                    <div class="bg-slide"></div>
-                </div>                
-
-                <div id="page-title">
-                    <div class="title-inner">
-                        <h1>My Creative<br>Activity</h1>
-                    </div>
+    <main>
+        <section class="hero section">
+            <div id="bg-slider" aria-hidden="true">
+                <div class="bg-slide"></div>
+                <div class="bg-slide"></div>
+                <div class="bg-slide"></div>
+                <div class="bg-slide"></div>
+            </div>
+            <div class="hero-inner fadein">
+                <p class="eyebrow">Creative Portfolio</p>
+                <h1>Create. Design. Play.</h1>
+                <p class="hero-copy">ゼミ活動・Web制作・ブラウザゲーム制作を通して、アイデアを見える形・遊べる形にしています。</p>
+                <div class="button-row">
+                    <a class="btn btn-primary" href="#web-works">View Works</a>
+                    <a class="btn btn-secondary" href="profile.html">Profile</a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!--活動紹介-->
-            <section id="3" class="activity start">
-                <div class="activity-head"></div>
-                <h2 class="activity-header">My Activity</h2>
-                
-                <div class="activity-scroll-wrapper">
-                    
-                    <!-- 01 -->
-                    <div class="activity-main fadein">
-                        <img class="activity-img" src="images/フード3.png" alt="">
-                        <div>
-                            <h3 class="activity-name">01. Circular Project</h3>
-                            <p class="activity-article">
-                                サーキュラープロジェクトの活動報告ページです。
-                                現在はグリーンエキスポに向けた準備を中心に、活動の様子や学び、成果を随時更新しています。<br>
-                                <a href="activity.html">Learn more...</a>
-                            </p>
+        <section id="activity" class="section">
+            <div class="section-heading fadein">
+                <p class="eyebrow">Seminar Project</p>
+                <h2>My Activity</h2>
+                <p>道用ゼミでの活動記録です。ここでは企業と連携した活動や卒業論文についての進捗状況をまとめています。</p>
+            </div>
+            <div class="horizontal-area">
+                <div class="card-grid horizontal-scroll" data-scroll-group>
+                    <!-- My Activity カード追加ここから -->
+                    <article class="work-card fadein">
+                        <img src="images/IMG_0780.jpg" alt="Circular Project">
+                        <div class="card-body">
+                            <p class="card-number">01</p>
+                            <h3>Circular Project</h3>
+                            <p>サーキュラーエコノミーをテーマに、素材調査から制作・発表まで取り組んだゼミ活動。</p>
+                            <div class="tag-list"><span>GREEN×EXPO 2027</span><span>Research</span><span>Presentation</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-circular-project.html">View Detail</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- 02 -->
-                    <div class="activity-main fadein">
-                        <img class="activity-img" src="images/IMG_8963.jpg" alt="">
-                        <div>
-                            <h3 class="activity-name">02. Co-creation Lab</h3>
-                            <p class="activity-article">
-                                環境省とのプロジェクト活動報告ページです。
-                                現在は衣服のリメイク過程を可視化するシステムを用い、衣服循環に取り組んでいます。
-                                活動の成果を随時更新します。<br>
-                                <a href="activity2.html">Learn more...</a>
-                            </p>
+                    </article>
+                    <article class="work-card fadein">
+                        <img src="images/IMG_8963.jpg" alt="Co-creation Lab">
+                        <div class="card-body">
+                            <p class="card-number">02</p>
+                            <h3>Co-creation Lab</h3>
+                            <p>衣服のリメイク過程をWebで可視化し、循環の価値を伝える共創プロジェクト。</p>
+                            <div class="tag-list"><span>Community Loops</span><span>Web Application</span><span>Remake</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-co-creation-lab.html">View Detail</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- 03 -->
-                    <div class="activity-main fadein">
-                        <img class="activity-img" src="images/ウェブデザイナー.png" alt="">
-                        <div>
-                            <h3 class="activity-name">03. Task</h3>
-                            <p class="activity-article">
-                                これまでに手がけたWEBサイトやポスターなどの制作物を紹介します。
-                                作品を通じて私の得意分野やデザインを知っていただければ幸いです。<br>
-                                お仕事のご依頼も大歓迎です！！<br>
-                                <a href="task.html">Learn more...</a>
-                            </p>
+                    </article>
+                    <article class="work-card fadein">
+                        <img src="images/ウェブデザイナー.png" alt="卒業論文">
+                        <div class="card-body">
+                            <p class="card-number">03</p>
+                            <h3>卒業論文</h3>
+                            <p>卒業論文に向けた活動記録です。現在準備中です。</p>
+                            <div class="tag-list"><span>Research</span><span>Thesis</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-graduation-thesis.html">View Detail</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                    <!-- My Activity カード追加ここまで -->
+                </div>
+                <button class="slider-arrow" type="button" aria-label="次のカードへ">→</button>
+            </div>
+        </section>
 
-                </div> <!-- End .activity-scroll-wrapper -->
+        <section id="web-works" class="section section-panel">
+            <div class="section-heading fadein">
+                <p class="eyebrow">Web Design / Coding</p>
+                <h2>My Web Works</h2>
+                <p>制作したWeb作品の紹介です。ここでは私がゼミで制作したWebアプリケーションや企業のHPをまとめています。</p>
+            </div>
+            <div class="horizontal-area">
+                <div class="card-grid horizontal-scroll" data-scroll-group>
+                    <!-- My Web Works カード追加ここから -->
+                    <article class="work-card fadein">
+                        <img src="images/Gemini_Generated_Image_l0y9e9l0y9e9l0y9.png" alt="JEANOME">
+                        <div class="card-body">
+                            <p class="card-number">01</p>
+                            <h3>JEANOME</h3>
+                            <p>衣服の記録とリメイクの過程を「遺伝子」として可視化するWebサービスのデモサイト。</p>
+                            <div class="tag-list"><span>PHP</span><span>CSS</span><span>JavaScript</span><span>MySQL</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-jeanome.html">View Detail</a>
+                                <a class="btn btn-small btn-secondary" href="https://hikaru-01817.github.io/Project_gene_for_clothing/" target="_blank" rel="noopener">View Site</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card fadein">
+                        <img src="images/Gemini_Generated_Image_jrvle8jrvle8jrvl.png" alt="M.S Future Life">
+                        <div class="card-body">
+                            <p class="card-number">02</p>
+                            <h3>M.S Future Life</h3>
+                            <p>マンション管理支援会社のWebサイト制作。文字の見やすさと情報の探しやすさを重視しました。</p>
+                            <div class="tag-list"><span>Corporate</span><span>PHP</span><span>CSS</span><span>JavaScript</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-msfuturelife.html">View Detail</a>
+                                <a class="btn btn-small btn-secondary" href="https://msfuturelife.jp/" target="_blank" rel="noopener">View Site</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- My Web Works カード追加ここまで -->
+                </div>
+                <button class="slider-arrow" type="button" aria-label="次のカードへ">→</button>
+            </div>
+        </section>
 
-                <!-- 横スクロール用のボタン (スマホのみCSSで表示) -->
-                <button id="scroll-next" class="scroll-btn" aria-label="Next">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+        <section id="game-works" class="section">
+            <div class="section-heading fadein">
+                <p class="eyebrow">Games / Coding</p>
+                <h2>My Game Works</h2>
+                <p>私が制作したゲームの紹介です。ここではAIを活用して作成したゲームをまとめています。</p>
+            </div>
+            <div class="horizontal-area">
+                <div class="card-grid horizontal-scroll" data-scroll-group>
+                    <!-- My Game Works カード追加ここから -->
+                    <article class="work-card fadein">
+                        <img src="images/AI Games1.png" alt="AI Puzzle Game">
+                        <div class="card-body">
+                            <p class="card-number">01</p>
+                            <h3>AI Puzzle Game</h3>
+                            <p>AIツールとCodexを活用して制作した、スマホでも遊べるブロックパズルゲーム。</p>
+                            <div class="tag-list"><span>Puzzle</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-ai-puzzle-game.html">View Detail</a>
+                                <a class="btn btn-small btn-secondary" href="https://hikaru-01817.github.io/games1/" target="_blank" rel="noopener">Play Game</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card fadein">
+                        <img src="images/Grid Tactics.png" alt="Grid Tactics">
+                        <div class="card-body">
+                            <p class="card-number">02</p>
+                            <h3>Grid Tactics</h3>
+                            <p>盤面にユニットを配置し、カード効果を使って戦うPCブラウザ向けゲーム。</p>
+                            <div class="tag-list"><span>Cards</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            <div class="card-actions">
+                                <a class="btn btn-small btn-primary" href="detail-grid-tactics.html">View Detail</a>
+                                <a class="btn btn-small btn-secondary" href="https://hikaru-01817.github.io/Grid-Tactics/" target="_blank" rel="noopener">Play Game</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- My Game Works カード追加ここまで -->
+                </div>
+                <button class="slider-arrow" type="button" aria-label="次のカードへ">→</button>
+            </div>
+        </section>
 
-            </section>
+        <section class="section profile-preview section-panel">
+            <div class="profile-preview-media fadein">
+                <img src="images/IMG_3732.jpeg" alt="Hikaru profile photo">
+            </div>
+            <div class="profile-preview-text fadein">
+                <p class="eyebrow">Profile Preview</p>
+                <h2>アイデアを、伝わる形に整える。</h2>
+                <p>ゼミ活動での調査や発表、Web制作、ブラウザゲーム制作を通して、企画から見た目、操作感まで一つずつ形にしています。</p>
+                <a class="btn btn-primary" href="profile.html">Profile</a>
+            </div>
+        </section>
 
-            <!--フッター-->
-            <section class="end">
-                <footer>
-                    <div>
-                        <ul class="footer-nav">
-                            <li><a href="mailto:r202301812fd@jinadai.jp">Contact</a></li>
-                            <li><a href="https://instagram.com/">Instagram</a></li>
-                        </ul>
-                        <p><small>&copy; 2025 Hikaru</small></p>
-                    </div>
-                </footer>
-            </section>
-        </main>
-    </body>
+        <section id="contact" class="section contact-section">
+            <div class="section-heading fadein">
+                <p class="eyebrow">Contact</p>
+                <h2>Let’s Connect</h2>
+                <p>制作物や活動についての連絡は、メールまたはInstagramからお願いします。</p>
+            </div>
+            <div class="contact-card fadein">
+                <a class="contact-link" href="mailto:r202301812fd@jinadai.jp">r202301812fd@jinadai.jp</a>
+                <a class="contact-link" href="https://www.instagram.com/_hika117/?igsh=N29tMnBzamo3aW5p&utm_source=qr#" target="_blank" rel="noopener">Instagram @_hika117</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Hikaru Creative Portfolio</p>
+    </footer>
+</body>
 </html>
+
+

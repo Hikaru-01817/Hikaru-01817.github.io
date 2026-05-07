@@ -1,175 +1,177 @@
-//ローディングから画面遷移
-const loadingAreaGrey = document.querySelector('#loading');
-const loadingAreaGreen = document.querySelector('#loading-screen');
+const loading = document.querySelector("#loading");
 
-window.addEventListener('load', () =>{
-    //ローディング中(グレースクリーン)
-    loadingAreaGrey.animate(
-        {
-            opacity: [1,0],
-            visibility: 'hidden',
-        },
-        {
-            duration: 1500,
-            delay: 1200,
-            easing: 'ease',
-            fill: 'forwards'
-        }
-    );
-
-    //ローディング中(紺色スクリーン)
-    loadingAreaGreen.animate(
-        {
-            translate: ['0 100vh', '0 0', '0 -100vh'] 
-        },
-        {
-            duration: 5000,
-            delay: 900,
-            easing: 'ease',
-            fill: 'forwards'
-        }
-    );
-});
-
-//スライドメニュー
-const menuOpen = document.querySelector('#menu-open');
-const menuClose = document.querySelector('#menu-close');
-const menuPanel = document.querySelector('#menu-panel');
-const menuItems = document.querySelectorAll('#menu-panel li');
-const menuOptions = {
-    duration: 1400,
-    easing: 'ease',
-    fill: 'forwards',
-};
-
-//メニューを開く
-menuOpen.addEventListener('click', () => {
-    //console.log('メニューを開く');
-    menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
-
-    //リンクをひとつずつ順に表示
-    menuItems.forEach((menuItem, index) =>{
-        //console.log(`$[index]番目のリスト`);
-        menuItem.animate(
-            {
-                opacity: [0, 1],
-                translate: ['2rem', 0],
-            },
-            {
-                duration: 2400,
-                delay: 300 * index,
-                easing: 'ease',
-                fill: 'forwards',
-            }
-        );
+if (loading) {
+    window.addEventListener("load", () => {
+        loading.classList.add("is-hidden");
     });
-});
+}
 
-//メニューを閉じる
-menuClose.addEventListener('click', () => {
-    menuPanel.animate({translate: [0, '100vw']}, menuOptions);
-    menuItems.forEach((menuItem) =>{
-        menuItem.animate({opacity: [1, 0]}, menuOptions);
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector(".site-nav");
+
+if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
+        navToggle.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
     });
-});
 
-//監視対象が範囲内に現れたら実行する動作
-const animateFade = (entries, obs) => {
-    entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-        entry.target.animate(
-        {
-            opacity: [0, 1],
-            filter: ['blur(.4rem)', 'blur(0)'], 
-            translate: ['0 4rem', 0],
-        },
-        {
-            duration: 2000,
-            easing: 'ease',
-            fill: 'forwards',
-        }
-        );
-      // 一度表示されたら監視をやめる
-        obs.unobserve(entry.target);
-    }
-    });
-};
-//監視範囲を狭く
-const options = {
-    rootMargin: "-20% 0px",
-    threshold: 0.1
-};
-// 監視設定
-const fadeObserver = new IntersectionObserver(animateFade,options);
-// .fadeinを監視するよう指示
-const fadeElements = document.querySelectorAll('.fadein');
-fadeElements.forEach((fadeElement) => {
-    fadeObserver.observe(fadeElement);
-});
-
-// スマホ用横スクロールボタンの動作（Activityページ用）
-const scrollNextBtn = document.querySelector('#scroll-next');
-const scrollWrapper = document.querySelector('.activity-scroll-wrapper');
-
-if(scrollNextBtn && scrollWrapper) {
-    scrollNextBtn.addEventListener('click', () => {
-        // カード要素をすべて取得
-        const cards = scrollWrapper.querySelectorAll('.activity-main');
-        if (cards.length === 0) return;
-
-        // カード1枚分の幅 + ギャップ(20px)を計算
-        const cardWidth = cards[0].offsetWidth;
-        const gap = 20; 
-        const itemStride = cardWidth + gap;
-        
-        // 現在のスクロール位置から、何枚目（インデックス）にいるか計算
-        const currentScroll = scrollWrapper.scrollLeft;
-        const currentIndex = Math.round(currentScroll / itemStride);
-
-        // 次のインデックスを決定 (最後の次は0に戻る)
-        let nextIndex = currentIndex + 1;
-        if (nextIndex >= cards.length) {
-            nextIndex = 0;
-        }
-
-        // 計算した位置へスクロール
-        scrollWrapper.scrollTo({
-            left: nextIndex * itemStride,
-            behavior: 'smooth'
+    siteNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            siteNav.classList.remove("is-open");
+            navToggle.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
         });
     });
 }
 
-// スマホ用横スクロールボタンの動作（Taskページ用）
-const taskScrollNextBtn = document.querySelector('#task-scroll-next');
-const taskScrollWrapper = document.querySelector('.task-scroll-wrapper');
+const fadeElements = document.querySelectorAll(".fadein");
 
-if(taskScrollNextBtn && taskScrollWrapper) {
-    taskScrollNextBtn.addEventListener('click', () => {
-        // カード要素をすべて取得
-        const cards = taskScrollWrapper.querySelectorAll('.work-card');
-        if (cards.length === 0) return;
+if ("IntersectionObserver" in window) {
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { rootMargin: "-10% 0px", threshold: 0.12 });
 
-        // カード1枚分の幅 + ギャップ(20px)を計算
-        // cssで width: 85vw, gap: 20px となっている前提
-        const cardWidth = cards[0].offsetWidth;
-        const gap = 20; 
-        const itemStride = cardWidth + gap;
-        
-        // 現在のスクロール位置から、何枚目（インデックス）にいるか計算
-        const currentScroll = taskScrollWrapper.scrollLeft;
-        const currentIndex = Math.round(currentScroll / itemStride);
+    fadeElements.forEach((element) => fadeObserver.observe(element));
+} else {
+    fadeElements.forEach((element) => element.classList.add("is-visible"));
+}
 
-        // 次のインデックスを決定 (最後の次は0に戻る)
-        let nextIndex = currentIndex + 1;
-        if (nextIndex >= cards.length) {
-            nextIndex = 0;
+const sliderMedia = window.matchMedia("(max-width: 860px)");
+
+document.querySelectorAll(".horizontal-area").forEach((area) => {
+    const scroller = area.querySelector("[data-scroll-group]");
+    const button = area.querySelector(".slider-arrow");
+    if (!scroller || !button) return;
+
+    const originalCards = Array.from(scroller.querySelectorAll(".work-card"));
+    let loopEnabled = false;
+    let originalStart = 0;
+    let loopWidth = 0;
+    let stride = 0;
+    let scrollTimer = 0;
+
+    const getGap = () => {
+        const styles = getComputedStyle(scroller);
+        return Number.parseFloat(styles.columnGap || styles.gap || "0");
+    };
+
+    const getStride = () => {
+        const card = originalCards[0];
+        if (!card) return 0;
+        return card.getBoundingClientRect().width + getGap();
+    };
+
+    const measureLoop = () => {
+        stride = getStride();
+        if (!stride) return;
+        originalStart = originalCards[0].offsetLeft;
+        loopWidth = originalCards.length * stride;
+    };
+
+    const makeClone = (card) => {
+        const clone = card.cloneNode(true);
+        clone.classList.add("loop-clone", "is-visible");
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("a, button").forEach((control) => {
+            control.setAttribute("tabindex", "-1");
+        });
+        return clone;
+    };
+
+    const removeClones = () => {
+        scroller.querySelectorAll(".loop-clone").forEach((clone) => clone.remove());
+        loopEnabled = false;
+        originalStart = 0;
+        loopWidth = 0;
+        stride = 0;
+    };
+
+    const jumpTo = (left) => {
+        scroller.scrollTo({ left, behavior: "auto" });
+    };
+
+    const normalizeLoop = () => {
+        if (!loopEnabled || !loopWidth || !stride) return;
+
+        const left = scroller.scrollLeft;
+        const beforeOriginal = originalStart - stride;
+        const afterOriginal = originalStart + loopWidth + stride;
+
+        if (left <= beforeOriginal) {
+            jumpTo(left + loopWidth);
+        } else if (left >= afterOriginal) {
+            jumpTo(left - loopWidth);
+        }
+    };
+
+    const scheduleNormalize = () => {
+        if (!loopEnabled) return;
+        window.clearTimeout(scrollTimer);
+        scrollTimer = window.setTimeout(normalizeLoop, 120);
+    };
+
+    // Smartphone-only loop: clone cards around the real cards so swiping keeps feeling continuous.
+    const enableMobileLoop = () => {
+        if (loopEnabled || originalCards.length < 2) return;
+
+        originalCards.slice().reverse().forEach((card) => {
+            scroller.prepend(makeClone(card));
+        });
+        originalCards.forEach((card) => {
+            scroller.append(makeClone(card));
+        });
+
+        loopEnabled = true;
+        requestAnimationFrame(() => {
+            measureLoop();
+            jumpTo(originalStart);
+        });
+    };
+
+    // Desktop keeps the normal scrollbar. Smartphone gets the loop clones and starts at the real first card.
+    const syncSliderMode = () => {
+        window.clearTimeout(scrollTimer);
+        if (sliderMedia.matches) {
+            removeClones();
+            enableMobileLoop();
+        } else {
+            removeClones();
+            jumpTo(0);
+        }
+    };
+
+    scroller.addEventListener("scroll", scheduleNormalize, { passive: true });
+
+    button.addEventListener("click", () => {
+        const step = getStride();
+        if (!step) return;
+
+        if (loopEnabled) {
+            scroller.scrollTo({ left: scroller.scrollLeft + step, behavior: "smooth" });
+            window.clearTimeout(scrollTimer);
+            scrollTimer = window.setTimeout(normalizeLoop, 380);
+            return;
         }
 
-        // 計算した位置へスクロール
-        taskScrollWrapper.scrollTo({
-            left: nextIndex * itemStride,
-            behavior: 'smooth'
-        });
+        const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+        const nextLeft = scroller.scrollLeft + step;
+
+        if (nextLeft >= maxScroll - 8) {
+            scroller.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            scroller.scrollTo({ left: nextLeft, behavior: "smooth" });
+        }
     });
-}
+
+    sliderMedia.addEventListener("change", syncSliderMode);
+    window.addEventListener("resize", () => {
+        if (!sliderMedia.matches) return;
+        syncSliderMode();
+    });
+    syncSliderMode();
+});

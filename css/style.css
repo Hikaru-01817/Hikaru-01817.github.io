@@ -1018,7 +1018,9 @@ h3 {
     .hero {
         padding-inline: 18px;
     }
-
+    .hero-inner {
+        padding-top: 25%;
+    }
     .hero h1 {
         font-size: clamp(3.05rem, 17vw, 4.8rem);
     }

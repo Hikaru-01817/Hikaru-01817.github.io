@@ -1,3 +1,24 @@
+const initialScrollMedia = window.matchMedia("(max-width: 860px)");
+const isIndexPage = /(^|\/)(index\.html)?$/.test(window.location.pathname);
+const shouldResetInitialScroll = initialScrollMedia.matches && isIndexPage && !window.location.hash;
+
+const resetInitialScroll = () => {
+    if (!shouldResetInitialScroll) return;
+    window.scrollTo(0, 0);
+};
+
+if (shouldResetInitialScroll) {
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("pageshow", () => {
+        resetInitialScroll();
+        requestAnimationFrame(resetInitialScroll);
+        window.setTimeout(resetInitialScroll, 120);
+    });
+}
+
 const loading = document.querySelector("#loading");
 
 if (loading) {
@@ -143,6 +164,8 @@ document.querySelectorAll(".horizontal-area").forEach((area) => {
             removeClones();
             jumpTo(0);
         }
+
+        requestAnimationFrame(resetInitialScroll);
     };
 
     scroller.addEventListener("scroll", scheduleNormalize, { passive: true });
